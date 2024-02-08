@@ -16,8 +16,9 @@ const config: Config = {
     },
     colors: {
       vanilla: '#fdf6e9', 
-      griscoscuro: '#e7e3e0',
-      rojo: '#ff0000'
+      grisoscuro: '#e7e3e0',
+      rojo: '#ff0000',
+      grisclaro: '#f7f5f4',
     }
   },
   plugins: [],

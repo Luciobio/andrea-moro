@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from "next/image";
-import andreaLogo from "../../../public/images/Andrea Logo.jpeg"
+import andreaLogo from "../../public/images/Andrea Logo.jpeg"
 
 export const Navbar = () => {
   return (
-    <div className="relative mx-auto">
+    <div className="relative mx-auto w-screen">
       {/* <!-- navbar --> */}
       <nav className="flex justify-center bg-vanilla w-screen">
         <Image className="py-5" src={andreaLogo} alt={"Logo"} width={150} height={150} priority={false} />
