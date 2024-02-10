@@ -13,7 +13,7 @@ export const Card = ({curso}: Props) => {
     const {name,categories,price,img} = curso;
 
     return (
-        <div className="mx-auto right-0 mt-2 w-60">
+        <div className="mx-auto right-0 mt-2 w-80">
             <div className="bg-white rounded overflow-hidden shadow-lg">
                 <div className="text-center bg-gray-800" /* style={{ backgroundImage: `url(${flower.src})` }} */>
                     <Image src={img} alt={''} />
