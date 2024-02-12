@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+import { NextResponse, NextRequest } from "next/server";
+import { z } from "zod";
+import { cursoModel, MongoDatabase } from "@/server/data";
+import {
+PaginationDto,
+executePagination,
+validateSort,
+} from "@/server/shared";
 
-## Getting Started
+const cursoSchema = z.object({
+titulo: z
+.string()
+.min(3, { message: "title must be at least 3 characters long" }),
+descripcion: z
+.string()
+.min(3, { message: "descripcion must be at least 3 characters long" }),
+precio: z
+.number()
+.min(3, { message: "precio must be at least 3 characters long" }),
+});
 
-First, run the development server:
+export async function GET(req: Request) {
+const { searchParams }: any = new URL(req.url);
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+let page = searchParams.get("page");
+let limit = searchParams.get("limit");
+let sort = searchParams.get("sort");
+const defaultPage = 1;
+const defaultLimit = 10;
+const defaultSort = "asc";
+try {
+const [err, paginationDto]: any = PaginationDto.create({
+limit: limit ?? defaultLimit,
+page: page ?? defaultPage,
+sort: sort ?? defaultSort,
+});
+if (err) {
+return NextResponse.json(err);
+}
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    await MongoDatabase.connect();
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    const sortOptionsResults = validateSort(paginationDto.sort);
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    const skipValue = (paginationDto.page - 1) * paginationDto.limit;
+    const products = await cursoModel
+      .find()
+      .skip(skipValue)
+      .limit(limit)
+      .sort(sortOptionsResults);
 
-## Learn More
+    const docs: number = await cursoModel.countDocuments();
 
-To learn more about Next.js, take a look at the following resources:
+    const paginationResults: any = executePagination({
+      page: parseInt(paginationDto.page),
+      limit: parseInt(paginationDto.limit),
+      sort: paginationDto.sort,
+      productUrl: "cursos",
+      docs: docs,
+      products: products,
+    });
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    return NextResponse.json(paginationResults);
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+} catch (err) {
+console.error(err);
+return NextResponse.json({ message: err }, { status: 500 });
+} finally {
+MongoDatabase.close();
+}
+}
 
-## Deploy on Vercel
+export async function POST(request: Request) {
+try {
+await MongoDatabase.connect();
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    const validated = cursoSchema.parse(await request.json());
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    const payloadCreated = await cursoModel.create(validated);
+
+    await payloadCreated.save();
+
+    return NextResponse.json({ message: payloadCreated });
+
+} catch (error) {
+console.error(error);
+return NextResponse.json({ message: "error" }, { status: 500 });
+} finally {
+MongoDatabase.close();
+}
+}
+
+//! Este no se testeó
+export async function PUT(request: Request) {
+try {
+await MongoDatabase.connect();
+
+    const validated = cursoSchema.parse(await request.json());
+
+    await cursoModel.findByIdAndUpdate(validated);
+
+    return NextResponse.json({ message: validated });
+
+} catch (error) {
+console.error(error);
+return NextResponse.json({ message: "error" }, { status: 500 });
+} finally {
+MongoDatabase.close();
+}
+}
+
+export async function DELETE(request: Request) {
+try {
+await MongoDatabase.connect();
+
+    await cursoModel.findByIdAndDelete(id);
+    return NextResponse.json("Borrados");
+
+} catch (error) {
+return NextResponse.json(error, { status: 400 });
+} finally {
+MongoDatabase.close();
+}
+}
