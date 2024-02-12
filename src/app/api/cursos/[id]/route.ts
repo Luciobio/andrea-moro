@@ -28,15 +28,16 @@ const cursoSchema = z.object({
   status: z.boolean().optional(),
 });
 
-export async function DELETE(req: Request, { params }: Segments) {
+export async function GET(req: Request, { params }: Segments) {
   try {
     await MongoDatabase.connect();
 
-    await cursoModel.findByIdAndDelete(params.id);
+    const payloadCurso = await cursoModel.findById(params.id);
 
     return NextResponse.json({
       status: true,
-      message: "Curso deleted successfully",
+      message: "Curso found successfully",
+      payload: payloadCurso,
     });
   } catch (error) {
     return NextResponse.json(
@@ -109,6 +110,29 @@ export async function PUT(req: Request, { params }: Segments) {
         { status: 500 }
       );
     }
+  } finally {
+    MongoDatabase.close();
+  }
+}
+
+export async function DELETE(req: Request, { params }: Segments) {
+  try {
+    await MongoDatabase.connect();
+
+    await cursoModel.findByIdAndDelete(params.id);
+
+    return NextResponse.json({
+      status: true,
+      message: "Curso deleted successfully",
+    });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        status: false,
+        message: "Something went wrong!",
+      },
+      { status: 500 }
+    );
   } finally {
     MongoDatabase.close();
   }

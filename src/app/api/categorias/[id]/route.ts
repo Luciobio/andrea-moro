@@ -16,15 +16,16 @@ const categoriaSchema = z.object({
   status: z.boolean().optional(),
 });
 
-export async function DELETE(req: Request, { params }: Segments) {
+export async function GET(req: Request, { params }: Segments) {
   try {
     await MongoDatabase.connect();
 
-    await categoriaModel.findByIdAndDelete(params.id);
+    const payloadCategoria = await categoriaModel.findById(params.id);
 
     return NextResponse.json({
       status: true,
-      message: "Element deleted successfully",
+      message: "Categoria found successfully",
+      payload: payloadCategoria,
     });
   } catch (error) {
     return NextResponse.json(
@@ -97,6 +98,29 @@ export async function PUT(req: Request, { params }: Segments) {
         { status: 500 }
       );
     }
+  } finally {
+    MongoDatabase.close();
+  }
+}
+
+export async function DELETE(req: Request, { params }: Segments) {
+  try {
+    await MongoDatabase.connect();
+
+    await categoriaModel.findByIdAndDelete(params.id);
+
+    return NextResponse.json({
+      status: true,
+      message: "Element deleted successfully",
+    });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        status: false,
+        message: "Something went wrong!",
+      },
+      { status: 500 }
+    );
   } finally {
     MongoDatabase.close();
   }
