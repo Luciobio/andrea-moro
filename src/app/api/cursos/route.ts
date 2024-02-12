@@ -1,11 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { ZodError, z } from "zod";
-import { cursoModel, MongoDatabase } from "@/server/data";
-import {
-  PaginationDto,
-  executePagination,
-  validateSort,
-} from "@/server/shared";
+import { cursoModel, MongoDatabase } from "@/data";
+import { PaginationDto, executePagination, validateSort } from "@/shared";
 
 const cursoSchema = z.object({
   titulo: z

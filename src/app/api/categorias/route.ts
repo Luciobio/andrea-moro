@@ -1,11 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { ZodError, z } from "zod";
-import { categoriaModel, MongoDatabase } from "@/server/data";
-import {
-  PaginationDto,
-  executePagination,
-  validateSort,
-} from "@/server/shared";
+import { categoriaModel, MongoDatabase } from "@/data";
+import { PaginationDto, executePagination, validateSort } from "@/shared";
 
 const childrenSchema = z.object({
   status: z.boolean().optional(),

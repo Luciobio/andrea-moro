@@ -1,4 +1,4 @@
-import { MongoDatabase, categoriaModel } from "@/server/data";
+import { MongoDatabase, categoriaModel } from "@/data";
 import { NextResponse } from "next/server";
 import { ZodError, z } from "zod";
 

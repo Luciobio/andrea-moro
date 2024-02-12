@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
-import { MongoDatabase, cursoModel } from "@/server/data";
-import {
-  PaginationDto,
-  executePagination,
-  validateSort,
-} from "@/server/shared";
+import { MongoDatabase, cursoModel } from "@/data";
+import { PaginationDto, executePagination, validateSort } from "@/shared";
 
 interface Segments {
   params: {
