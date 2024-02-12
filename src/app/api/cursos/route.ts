@@ -65,7 +65,7 @@ export async function GET(req: Request) {
       products: products,
     });
 
-    return NextResponse.json({ paginationResults });
+    return NextResponse.json(paginationResults);
   } catch (err) {
     return NextResponse.json(
       {
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
 
     await payloadFromDb.save();
 
-    return NextResponse.json({ payloadFromDb });
+    return NextResponse.json({ payload: payloadFromDb });
   } catch (err) {
     if (err instanceof ZodError) {
       return NextResponse.json(
