@@ -7,12 +7,18 @@ import {
   validateSort,
 } from "@/server/shared";
 
+const childrenSchema = z.object({
+  status: z.boolean().optional(),
+  type: z.array(z.string()).optional(),
+});
+
 const categoriaSchema = z.object({
   titulo: z
     .string()
     .min(3, { message: "Titulo must be at least 3 characters long" })
     .max(25, { message: "Titulo must be at most 25 characters long" }),
   status: z.boolean().optional(),
+  children: childrenSchema.optional(),
 });
 
 export async function GET(req: Request) {
