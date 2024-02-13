@@ -1,6 +1,7 @@
 import { About } from "../components/About";
 import { Navbar } from "../components/Navbar";
 import { Cursos } from '../components/Cursos';
+import { Contact } from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar/>
       <About />
       <Cursos/>
+      <Contact/>
     </>
   );
 }

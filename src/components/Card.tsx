@@ -14,7 +14,7 @@ export const Card = ({curso}: Props) => {
 
     return (
         <div className="mx-auto right-0 mt-2 w-80">
-            <div className="bg-white rounded overflow-hidden shadow-lg">
+            <div className="overflow-hidden shadow-lg">
                 <div className="text-center bg-gray-800" /* style={{ backgroundImage: `url(${flower.src})` }} */>
                     <Image src={img} alt={''} />
                     {/* <div className="mt-5">
@@ -26,17 +26,17 @@ export const Card = ({curso}: Props) => {
                     </div> */}
                 </div>
                 <div className="bg-grisoscuro">
-                    <Link href="" className="px-4 py-2 hover:bg-gray-100 flex">
+                    <Link href="" className="px-4 py-4 hover:bg-gray-100 flex">
                         <div className="pl-3">
-                            <p className="text-sm font-medium text-gray-800 leading-none">
+                            <p className="text-lg font-medium leading-none">
                                 {name}
                             </p>
-                            <p className="text-xs text-gray-500"> {categories.map( c => c)} </p>
+                            <div className=" flex justify-between text-xs py-4 w-9/12"> {categories.map( c => (<span className='bg-grisclaro p-2 mx-2 rounded-2xl'>{' '+c+' '}</span>))} </div>
                         </div>
                     </Link>
                     <Link href="" className="px-4 py-2 hover:bg-gray-100 flex">
                         <div className="pl-3">
-                            <p className="text-sm font-medium text-gray-800 leading-none">${price}</p>
+                            <p className="text-sm font-medium leading-none">${price}</p>
                             {/* <p className="text-xs text-gray-500">View your last donations</p> */}
                         </div>
                     </Link>
