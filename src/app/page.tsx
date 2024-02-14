@@ -1,7 +1,4 @@
-import { About } from "../components/About";
-import { Navbar } from "../components/Navbar";
-import { Cursos } from '../components/Cursos';
-import { Contact } from "@/components";
+import { About, Navbar, Cursos, Contact, Footer } from "@/components";
 
 export default function Home() {
   return (
@@ -10,6 +7,7 @@ export default function Home() {
       <About />
       <Cursos/>
       <Contact/>
+      <Footer/>
     </>
   );
 }

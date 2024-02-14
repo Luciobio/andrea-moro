@@ -19,8 +19,11 @@ const config: Config = {
       grisoscuro: '#e7e3e0',
       rojo: '#ff0000',
       grisclaro: '#f7f5f4',
-      marron: "#a7856a",
-      marroncalido: "#9c8784"
+      marron: '#a7856a',
+      marroncalido: '#9c8784',
+      grisclarito: '#9f9f9f',
+      blanco: '#ffffff',
+      gris200: '#ebe7e5'
     }
   },
   plugins: [],

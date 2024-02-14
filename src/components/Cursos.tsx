@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Card } from '../components/Card';
 import difusors from "../../public/images/Flores/Difusor simple.jpeg";
 import difusorg from "../../public/images/Flores/Difusor grande.jpeg";
@@ -56,7 +55,7 @@ const cursos = [
 export const Cursos = () => {
 
     return (
-        <div className='flex flex-col items-center justify-center w-10/12 mx-auto pb-20'>
+        <div id='cursos' className='flex flex-col items-center justify-center w-10/12 mx-auto pb-20 bg-blanco'>
             <h2 className='p-16 font-bold text-3xl'> Mis Cursos</h2>
             <div id='cardCont' className='flex flex-wrap gap-10 items-center justify-center'>
                 {

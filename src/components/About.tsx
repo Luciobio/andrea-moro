@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import aboutbg from "../../public/images/Fondo.png";
-import aboutbg2 from "../../public/images/Fondo 2.jpg";
 import aboutSelfie from "../../public/images/About_selfie_a.jpg";
 import aboutFlower from "../../public/images/About_flower_a.jpg";
 import hola from "../../public/images/Hola.png";
@@ -9,6 +8,7 @@ import hola from "../../public/images/Hola.png";
 export const About = () => {
     return (
         <div
+            id="sobre-mi"
             className="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen w-screen"
             style={{ backgroundImage: `url(${aboutbg.src})` }}
         >
