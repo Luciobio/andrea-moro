@@ -1,4 +1,4 @@
-import { MongoDatabase, cursoModel } from "@/data";
+import prisma from "@/libs/prisma";
 import { NextResponse } from "next/server";
 import { ZodError, z } from "zod";
 
@@ -8,31 +8,33 @@ interface Segments {
   };
 }
 
-const cursoSchema = z.object({
-  titulo: z
+const productSchema = z.object({
+  title: z
     .string()
-    .min(3, { message: "Titulo must be at least 3 characters long" })
-    .max(255, { message: "Titulo must be at most 255 characters long" })
+    .min(3, { message: "Title must be at least 3 characters long" })
+    .max(255, { message: "Title must be at most 255 characters long" })
     .optional(),
-  descripcion: z
+  description: z
     .string()
-    .min(3, { message: "Descripcion must be at least 3 characters long" })
-    .max(255, { message: "Descripcion must be at most 255 characters long" })
+    .min(3, { message: "Description must be at least 3 characters long" })
+    .max(255, { message: "Description must be at most 255 characters long" })
     .optional(),
-  precio: z
+  price: z
     .number()
-    .min(3, { message: "Precio must be at least 3 characters long" })
+    .min(3, { message: "Price must be at least 3 characters long" })
     .optional(),
-  categorias: z.array(z.string()).optional(),
-  imagen: z.array(z.string()).optional(),
-  status: z.boolean().optional(),
+  categories: z.array(z.string()).optional(),
+  image: z.array(z.string()).optional(),
+  isActive: z.boolean().optional(),
 });
 
 export async function GET(req: Request, { params }: Segments) {
   try {
-    await MongoDatabase.connect();
-
-    const payloadCurso = await cursoModel.findById(params.id);
+    const payloadCurso = await prisma.product.findMany({
+      where: {
+        id: params.id,
+      },
+    });
 
     return NextResponse.json({
       status: true,
@@ -47,50 +49,37 @@ export async function GET(req: Request, { params }: Segments) {
       },
       { status: 500 }
     );
-  } finally {
-    MongoDatabase.close();
   }
 }
 
 export async function PUT(req: Request, { params }: Segments) {
   try {
-    await MongoDatabase.connect();
+    const newProductData = productSchema.parse(await req.json());
 
-    const newProductData = cursoSchema.parse(await req.json());
+    const existingProduct = await prisma.product.findUnique({
+      where: {
+        id: params.id,
+      },
+    });
 
-    const product = await cursoModel.findById(params.id);
-
-    if (!product) {
+    if (!existingProduct) {
       return NextResponse.json(
         { status: false, message: "Curso not found" },
         { status: 404 }
       );
     }
 
-    const existingProduct = await cursoModel.findOne(newProductData);
-
-    if (existingProduct) {
-      return NextResponse.json(
-        {
-          status: false,
-          message: "Components are the same. No update performed.",
-        },
-        { status: 400 }
-      );
-    }
-
-    const payloadResponse = await cursoModel.findByIdAndUpdate(
-      params.id,
-      newProductData,
-      {
-        new: true,
-      }
-    );
+    const updatedProduct = await prisma.product.update({
+      where: {
+        id: params.id,
+      },
+      data: newProductData,
+    });
 
     return NextResponse.json({
       status: true,
       message: "Curso updated successfully",
-      payload: payloadResponse,
+      payload: updatedProduct,
     });
   } catch (err) {
     if (err instanceof ZodError) {
@@ -110,16 +99,23 @@ export async function PUT(req: Request, { params }: Segments) {
         { status: 500 }
       );
     }
-  } finally {
-    MongoDatabase.close();
   }
 }
 
 export async function DELETE(req: Request, { params }: Segments) {
   try {
-    await MongoDatabase.connect();
+    const deletedProduct = await prisma.product.delete({
+      where: {
+        id: params.id,
+      },
+    });
 
-    await cursoModel.findByIdAndDelete(params.id);
+    if (!deletedProduct) {
+      return NextResponse.json({
+        status: false,
+        message: "Curso not found or already deleted",
+      });
+    }
 
     return NextResponse.json({
       status: true,
@@ -133,7 +129,5 @@ export async function DELETE(req: Request, { params }: Segments) {
       },
       { status: 500 }
     );
-  } finally {
-    MongoDatabase.close();
   }
 }
