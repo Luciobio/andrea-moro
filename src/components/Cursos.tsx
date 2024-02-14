@@ -6,20 +6,21 @@ import jazmin from "../../public/images/Flores/Jazmin.jpeg";
 import magnolia from "../../public/images/Flores/Magnolia.jpeg";
 import peonia from "../../public/images/Flores/Peonia.jpeg";
 import pimpollo from "../../public/images/Flores/Pimpollo rosa.jpeg";
+import carinosa from "../../public/images/Flores/Carinosa.jpeg";
 
 const cursos = [
     {
         id: 0,
         name: 'Difusor Simple',
         categories: ['Principiantes', 'Tela'],
-        price: 7000,
+        price: 6000,
         img: difusors,
     },
     {
         id: 1,
-        name: 'Difusor Grande',
+        name: 'Flor Grande',
         categories: ['Principiantes', 'Tela'],
-        price: 7000,
+        price: 6000,
         img: difusorg,
     },
     {
@@ -40,14 +41,35 @@ const cursos = [
         id: 4,
         name: 'Jazmin',
         categories: ['Expertas', 'Tela'],
-        price: 9000,
+        price: 8000,
         img: jazmin,
     },
     {
         id: 5,
-        name: 'Magnolia y Clavelina',
+        name: 'Cariñosa',
+        categories: ['Expertas', 'Tela'],
+        price: 8000,
+        img: carinosa,
+    },
+    {
+        id: 6,
+        name: 'Gigantes',
         categories: ['Expertas', 'Papel'],
         price: 9000,
+        img: carinosa,
+    },
+    {
+        id: 7,
+        name: 'Reales Peonias',
+        categories: ['Expertas', 'Papel'],
+        price: 12000,
+        img: peonia,
+    },
+    {
+        id: 8,
+        name: 'Magnolia y Clavelina',
+        categories: ['Expertas', 'Papel'],
+        price: 18000,
         img: magnolia,
     },
 ]
