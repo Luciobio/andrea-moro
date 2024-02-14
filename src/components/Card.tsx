@@ -31,7 +31,7 @@ export const Card = ({curso}: Props) => {
                             <p className="text-lg font-medium leading-none">
                                 {name}
                             </p>
-                            <div className=" flex justify-between text-xs py-4 w-9/12"> {categories.map( c => (<span className='bg-grisclaro p-2 mx-2 rounded-2xl'>{' '+c+' '}</span>))} </div>
+                            <div className=" flex justify-between text-xs py-4 w-9/12"> {categories.map( c => (<span key={c} className='bg-grisclaro p-2 mx-2 rounded-2xl'>{' '+c+' '}</span>))} </div>
                         </div>
                     </Link>
                     <Link href="" className="px-4 py-2 hover:bg-gray-100 flex">
