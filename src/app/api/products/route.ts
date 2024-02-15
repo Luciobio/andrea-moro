@@ -91,7 +91,8 @@ export async function GET(request: Request) {
 
 export async function POST(req: Request) {
   try {
-    const validatedData = productSchema.parse(await req.json());
+    //Todo: Arreglar type de 'validateData'
+    const validatedData: any = productSchema.parse(await req.json());
 
     const payloadDb = await prisma.product.create({ data: validatedData });
 
