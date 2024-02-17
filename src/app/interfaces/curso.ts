@@ -5,5 +5,5 @@ export interface iCurso {
     name: string;
     categories: string[];
     price: number;
-    img: StaticImageData;
+    imgs: StaticImageData[];
 }

@@ -19,10 +19,10 @@ export const About = () => {
                 <div className="flex flex-col justify-center h-full lg:w-1/3 md:w-2/3 sm:w-2/3">
                     <Image className="-ml-20 lg:flex md:hidden sm:hidden hidden" src={hola} alt={"Hola"} />
                     <h2 className="font-extralight text-3xl py-3 lg:mx-1 mx-auto" >SOY ANDREA</h2>
-                    <p className="w-4/5 font-light mx-auto mb-2" >Artista y guía en el frasco ante viaje a la creatividad.
+                    <p className="w-4/5 font-light mx-auto mb-2" >Artista y guía en el fascinante viaje a la creatividad.
                         Amante de la flores, la naturaleza y la decoración. 
                         A través de mis cursos , te invito a explorar el arte de crear flores con tus propias manos
-                        Acompáñame en este viaje donde la creatividad transformará espacios y corazones.
+                        Acompáñame en este trayecto donde la creatividad transformará espacios y corazones.
                         <br />Bienvenida a mi mundo vibrante y lleno de inspiración!!!</p>
                 </div>
                 <Image className="h-full w-1/3 lg:flex md:hidden sm:hidden hidden" src={aboutFlower} alt={"Magnolia"} />

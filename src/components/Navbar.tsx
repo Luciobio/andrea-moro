@@ -15,7 +15,7 @@ export const Navbar = () => {
 
           <div id='search' className='w-3/12 flex justify-start align-middle'>
             <a className="flex items-center hover:text-gris200" href="#">
-              <CiSearch className='text-2xl' stroke-width="1"/>
+              <CiSearch className='text-2xl' strokeWidth="1"/>
             </a>
           </div>
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
             {/* <!-- Header Icons --> */}
             <div className="hidden xl:flex space-x-5">
               <a className="flex items-center hover:text-gris200" href="#">
-                <CiShoppingCart className='text-2xl' stroke-width="1"/>
+                <CiShoppingCart className='text-2xl' strokeWidth="1"/>
                 {/* "Carrito" */}
                 <span className="flex absolute -mt-5 ml-4">
                   <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-marroncalido opacity-75"></span>
@@ -42,7 +42,7 @@ export const Navbar = () => {
 
               {/* <!-- Sign In / Register      --> */}
               <a className="flex items-center hover:text-gris200" href="#">
-              <CiUser className='text-2xl' stroke-width="1"/>
+              <CiUser className='text-2xl' strokeWidth="1"/>
               </a>
 
             </div>
@@ -51,14 +51,14 @@ export const Navbar = () => {
         </div>
         {/* <!-- Responsive navbar --> */}
         <a className="xl:hidden flex mr-6 items-center hover:text-gris200" href="#">
-          <CiShoppingCart className='text-2xl' stroke-width="1"/>
+          <CiShoppingCart className='text-2xl' strokeWidth="1"/>
           <span className="flex absolute -mt-5 ml-4">
             <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-marroncalido opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-marroncalido"></span>
           </span>
         </a>
         <a className="flex items-center hover:text-gris200 xl:hidden" href="#">
-          <CiUser className='text-2xl' stroke-width="1"/>
+          <CiUser className='text-2xl' strokeWidth="1"/>
         </a>
         {/* <a className="navbar-burger self-center mr-12 xl:hidden" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
