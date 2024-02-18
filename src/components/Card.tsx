@@ -33,7 +33,7 @@ export const Card = ({ curso }: Props) => {
                     <div className="text-center overflow-hidden relative">
                         <Image className='duration-700 ease-in-out' src={imgs[currentImageIndex]} alt={name} />
                         {/* Image indicator */}
-                        <div className="flex absolute bottom-5 left-0 right-0 justify-center z-30 space-x-3">
+                        <div className={ imgs.length > 1 ? "flex absolute bottom-5 left-0 right-0 justify-center z-30 space-x-3" : 'hidden' }>
                             {
                                 imgs.map(e =>(
                                     <button key={imgs.indexOf(e)} type="button" 
@@ -43,13 +43,13 @@ export const Card = ({ curso }: Props) => {
                                 ))
                             }
                         </div>
-                        <button type="button" className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" onClick={()=>handlePrevImage()}>
+                        <button type="button" className={ imgs.length > 1 ? "flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" : 'hidden'} onClick={()=>handlePrevImage()}>
                             <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25  group-focus:ring-blanco group-focus:outline-none">
                                 <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
                                 <span className="hidden">Previous</span>
                             </span>
                         </button>
-                        <button type="button" className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" onClick={()=>handleNextImage()}>
+                        <button type="button" className={ imgs.length > 1 ? "flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" : 'hidden'} onClick={()=>handleNextImage()}>
                             <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25 group-focus:ring-blanco group-focus:outline-none">
                                 <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                                 <span className="hidden">Next</span>
