@@ -42,8 +42,6 @@ export const Card = ({ curso }: Props) => {
                                     ></button>
                                 ))
                             }
-                            {/* <button type="button" className="w-3 h-3 rounded-full border-blanco border bg-grisclaro/75"></button>
-                            <button type="button" className="w-3 h-3 rounded-full border-blanco border bg-blanco"></button> */}
                         </div>
                         <button type="button" className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" onClick={()=>handlePrevImage()}>
                             <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25  group-focus:ring-blanco group-focus:outline-none">
@@ -71,7 +69,6 @@ export const Card = ({ curso }: Props) => {
                     <span className="px-4 py-2 hover:bg-gray-100 flex">
                         <div className="pl-3">
                             <p className="text-sm font-medium leading-none">${price}</p>
-                            {/* <p className="text-xs text-gray-500">View your last donations</p> */}
                         </div>
                     </span>
                 </div>
