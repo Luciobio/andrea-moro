@@ -59,8 +59,8 @@ export const Card = ({ curso }: Props) => {
                 </div>
                 <div className="bg-grisoscuro">
                     <span className="px-4 py-4 hover:bg-gray-100 flex">
-                        <div className="pl-3">
-                            <p className="text-lg font-medium leading-none">
+                        <div className="pl-3 h-24">
+                            <p className="text-lg font-medium leading-none h-8">
                                 {name}
                             </p>
                             <div className=" flex justify-between text-xs py-4 w-9/12"> {categories.map(c => (<span key={c} className='bg-grisclaro p-2 mx-2 rounded-2xl'>{' ' + c + ' '}</span>))} </div>

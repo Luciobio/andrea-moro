@@ -44,12 +44,12 @@ export const Footer = () => {
                                 <li className="mt-10">
                                     <a className="text-gray-500 cursor-pointer hover:text-grisoscuro">Preguntas Frecuentes</a>
                                 </li>
-                                <li className="mt-10">
+                                {/* <li className="mt-10">
                                     <a className="text-gray-500 cursor-pointer hover:text-grisoscuro">Métodos de Pago</a>
                                 </li>
                                 <li className="mt-10">
                                     <a className="text-gray-500 cursor-pointer hover:text-grisoscuro">Retiro de Productos</a>
-                                </li>
+                                </li> */}
                             </nav>
                         </div>
                         <div className="w-full px-4 lg:w-1/3 md:w-1/2">
@@ -66,7 +66,7 @@ export const Footer = () => {
                                 </li>
                                 <li className="mt-10 flex cursor-pointer hover:text-grisoscuro">
                                     <MdAlternateEmail className='text-2xl'/>
-                                    <Link className="ml-4" href='mailto:andreamoro@gmail.com'>andreamoro@gmail.com</Link>
+                                    <Link className="ml-4" href='mailto:andymoro32@gmail.com'>andymoro32@gmail.com</Link>
                                 </li>
                                 <li className="mt-10 flex cursor-pointer hover:text-grisoscuro">
                                     <FaPhoneAlt className='text-2xl'/>
