@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aboutbg from "../../public/images/Fondo.png";
+import aboutbg from "../../public/images/Fondo2.png";
 import aboutSelfie from "../../public/images/About_selfie_a.jpg";
 import aboutFlower from "../../public/images/About_flower_a.jpg";
 import hola from "../../public/images/Hola.png";
