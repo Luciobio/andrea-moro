@@ -12,7 +12,7 @@ export const About = () => {
             className="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen w-screen"
             style={{ backgroundImage: `url(${aboutbg.src})` }}
         >
-            <div className="flex flex-col items-center justify-center lg:flex-row md:flex-col sm:flex-col bg-grisoscuro size-8/12 lg:size-9/12 ">
+            <div className="flex flex-col items-center justify-center :flex-row md:flex-col sm:flex-col bg-grisoscuro size-8/12 lg:size-9/12 ">
                 <div className="flex items-center justify-center  w-1/3 ">
                     <Image className="align-center w-full h-full lg:w-9/12 rounded-full" src={aboutSelfie} alt={""} />
                 </div>
