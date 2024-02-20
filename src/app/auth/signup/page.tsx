@@ -3,8 +3,8 @@ import { SignupForm } from "./ui/SignupForm";
 import { auth } from "@/auth.config";
 import { redirect } from "next/navigation";
 export default async function NewAccountPage() {
-  const session = await auth();
-  if (!(session?.user?.roles && session.user.roles.includes("admin"))) {
+  const session: any = await auth();
+  if (!session?.user?.roles.includes("admin")) {
     redirect("/auth/signin?returnTo=/dashboard");
   }
 
