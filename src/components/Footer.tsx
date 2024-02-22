@@ -25,16 +25,16 @@ export const Footer = () => {
                             <h2 className="mb-3 text-sm font-medium tracking-widest text-grisclarito uppercase title-font">Links</h2>
                             <nav className="mb-10 list-none">
                                 <li className=" mt-10">
-                                    <a className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='#sobre-mi'>Sobre Mi</a>
+                                    <Link className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='/#sobre-mi'>Sobre Mi</Link>
                                 </li>
                                 <li className="mt-10">
-                                    <a className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='#cursos'>Cursos</a>
+                                    <Link className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='/#cursos'>Cursos</Link>
                                 </li>
                                 <li className="mt-10">
-                                    <a className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='#'>Productos</a>
+                                    <Link className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='/#galeria'>Galería</Link>
                                 </li>
                                 <li className="mt-10">
-                                    <a className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='#contacto'>Contacto</a>
+                                    <Link className="text-gray-500 cursor-pointer hover:text-grisoscuro" href='/#contacto'>Contacto</Link>
                                 </li>
                             </nav>
                         </div>

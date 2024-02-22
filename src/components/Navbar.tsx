@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import andreaLogo from "../../public/images/Andrea Logo.jpeg"
 import { CiSearch, CiShoppingCart, CiUser } from 'react-icons/ci';
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
@@ -22,10 +23,10 @@ export const Navbar = () => {
           <div id='menu' className='w-6/12 flex justify-center align-middle'>
             {/* <!-- Nav Links --> */}
             <ul className="hidden md:flex px-2 font-semibold font-heading space-x-16 xl:flex justify-between">
-              <li><a className="hover:text-gris200" href="#sobre-mi">Sobre Mi</a></li>
-              <li><a className="hover:text-gris200" href="#cursos">Cursos</a></li>
-              <li><a className="hover:text-gris200" href="#">Productos</a></li>
-              <li><a className="hover:text-gris200" href="#contacto">Contacto</a></li>
+              <li><Link className="hover:text-gris200" href="/#sobre-mi">Sobre Mi</Link></li>
+              <li><Link className="hover:text-gris200" href="/#cursos">Cursos</Link></li>
+              <li><Link className="hover:text-gris200" href="/#galería">Productos</Link></li>
+              <li><Link className="hover:text-gris200" href="/#contacto">Contacto</Link></li>
             </ul>
           </div>
 
