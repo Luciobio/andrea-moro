@@ -1,7 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import { iCurso } from '@/interfaces'
+import { getCursos } from '@/mockup'
 
-export const Curso = () => {
+interface Props {
+    curso: iCurso
+}
+
+export const Curso = ({ curso }: Props) => {
+
+    const { id, name, description, categories, price, imgs} = curso;
+
     return (
         <div className="w-10/12">
             <div key='imageGallery'>
@@ -13,8 +22,8 @@ export const Curso = () => {
                 </div>
             </div>
             <div key='infoBox'>
-                <h2>Nombre del Curso</h2>
-                <p>Descripción del Curso</p>
+                <h2>{name}</h2>
+                <p>{description}</p>
             </div>
         </div>
     )

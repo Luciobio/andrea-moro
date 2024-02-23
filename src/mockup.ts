@@ -1,23 +1,26 @@
-import difusors from "../../public/images/Flores/Difusor simple.jpeg";
-import grandotas from "../../public/images/Flores/Grandota.jpeg"
-import difusorg from "../../public/images/Flores/Difusor grande.jpeg";
-import jazmin from "../../public/images/Flores/Jazmin.jpeg";
-import magnolia from "../../public/images/Flores/Magnolia.jpeg";
-import peonia from "../../public/images/Flores/Peonia.jpeg";
-import peonia2 from "../../public/images/Flores/Peonia2.jpeg";
-import peonia3 from "../../public/images/Flores/Peonia3.jpeg";
-import pimpollo from "../../public/images/Flores/Pimpollo rosa.jpeg";
-import carinosa from "../../public/images/Flores/Carinosa.jpeg";
-import manteca from "../../public/images/Flores/Manteca.jpeg"
-import manteca2 from "../../public/images/Flores/Manteca2.jpeg"
-import manteca3 from "../../public/images/Flores/Manteca3.jpeg"
-import gigante from "../../public/images/Flores/Gigante.jpeg"
-import gigante2 from "../../public/images/Flores/Gigante2.jpeg"
-import gigante3 from "../../public/images/Flores/Gigante3.jpeg"
-import clavelina from "../../public/images/Flores/Clavelina.jpeg"
-import rosasalvaje from "../../public/images/Flores/RosaSalvaje.jpeg"
-import rosasalvaje2 from "../../public/images/Flores/RosaSalvaje2.jpeg"
-import rosasalvaje3 from "../../public/images/Flores/RosaSalvaje3.jpeg"
+import difusors from "../public/images/Flores/Difusor simple.jpeg";
+import grandotas from "../public/images/Flores/Grandota.jpeg"
+import difusorg from "../public/images/Flores/Difusor grande.jpeg";
+import jazmin from "../public/images/Flores/Jazmin.jpeg";
+import magnolia from "../public/images/Flores/Magnolia.jpeg";
+import peonia from "../public/images/Flores/Peonia.jpeg";
+import peonia2 from "../public/images/Flores/Peonia2.jpeg";
+import peonia3 from "../public/images/Flores/Peonia3.jpeg";
+import pimpollo from "../public/images/Flores/Pimpollo rosa.jpeg";
+import carinosa from "../public/images/Flores/Carinosa.jpeg";
+import manteca from "../public/images/Flores/Manteca.jpeg"
+import manteca2 from "../public/images/Flores/Manteca2.jpeg"
+import manteca3 from "../public/images/Flores/Manteca3.jpeg"
+import gigante from "../public/images/Flores/Gigante.jpeg"
+import gigante2 from "../public/images/Flores/Gigante2.jpeg"
+import gigante3 from "../public/images/Flores/Gigante3.jpeg"
+import clavelina from "../public/images/Flores/Clavelina.jpeg"
+import rosasalvaje from "../public/images/Flores/RosaSalvaje.jpeg"
+import rosasalvaje2 from "../public/images/Flores/RosaSalvaje2.jpeg"
+import rosasalvaje3 from "../public/images/Flores/RosaSalvaje3.jpeg"
+
+import { iCurso } from '@/interfaces';
+
 
 const cursos = [
     {
@@ -86,18 +89,18 @@ const cursos = [
     },
 ]
 
-export const getProducts = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(cursos);
-        }, 2000)
-    })
-};
+export const getCursos = async(): Promise<iCurso[]> => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return cursos;
+}
 
-export const getProduct = (id:number) => {
-    return new Promise ((resolve) => {
-        setTimeout(() => {
-            resolve(cursos.find(curso => curso.id === id));
-        }, 1000)
-    })
-};
+export const getCurso = async(id: number): Promise<iCurso> => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+     
+    const curso = cursos.find(curso => curso.id === id);
+    if (curso) {
+        return curso;
+    } else {
+        throw new Error(`Curso with id ${id} not found.`);
+    }
+}

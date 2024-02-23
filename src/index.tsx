@@ -1,0 +1,1 @@
+export {getCursos} from './mockup'

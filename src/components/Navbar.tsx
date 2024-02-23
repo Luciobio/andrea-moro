@@ -25,7 +25,7 @@ export const Navbar = () => {
             <ul className="hidden md:flex px-2 font-semibold font-heading space-x-16 xl:flex justify-between">
               <li><Link className="hover:text-gris200" href="/#sobre-mi">Sobre Mi</Link></li>
               <li><Link className="hover:text-gris200" href="/#cursos">Cursos</Link></li>
-              <li><Link className="hover:text-gris200" href="/#galería">Productos</Link></li>
+              <li><Link className="hover:text-gris200" href="/#galería">Galería</Link></li>
               <li><Link className="hover:text-gris200" href="/#contacto">Contacto</Link></li>
             </ul>
           </div>
