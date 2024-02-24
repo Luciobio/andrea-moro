@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Eliminar } from "./CursoEliminar";
+import Swal from "sweetalert2";
 interface Option {
   value: string;
   text: string;
@@ -27,7 +28,26 @@ export default function CursoInputs() {
 
   const handleCreateCurso = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    if (
+      !title ||
+      !price ||
+      !description ||
+      !images.length ||
+      !selectedValues().length
+    ) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Por favor completa todos los campos",
+      });
+      return;
+    }
     const selectedOptionValues = selectedValues();
 
     const formData = new FormData();
@@ -47,8 +67,6 @@ export default function CursoInputs() {
         body: formData,
       });
 
-      // Handle the response if needed
-
       setTitle("");
       setPrice("");
       setSelected([]);
@@ -56,12 +74,34 @@ export default function CursoInputs() {
       setDescription("");
       const newOptions = options.map((opt) => ({ ...opt, selected: false }));
       setOptions(newOptions);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Curso Añadido",
+      });
 
       // Reset other form data state variables
     } catch (error) {
-      console.error("Error creating curso:", error);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Error al añadir curso",
+      });
     }
   };
+
   const handleGetCategories = async () => {
     try {
       const res: any = await fetch("/api/categories?limit=10000", {
@@ -93,7 +133,6 @@ export default function CursoInputs() {
       const data = await res.json();
       return data.payload;
     } catch (err) {
-      console.log(err);
       return [];
     }
   };
@@ -365,8 +404,8 @@ export default function CursoInputs() {
       </form>
       <Eliminar
         id="eliminar"
-        title="Titulo del Producto"
-        placeholder="Eliminar producto"
+        title="Titulo del Curso"
+        placeholder="Eliminar curso"
         optionList={products}
       />
     </>

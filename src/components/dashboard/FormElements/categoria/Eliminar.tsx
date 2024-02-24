@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { OptionList } from "..";
+import Swal from "sweetalert2";
 interface Option {
   value: string;
   text: string;
@@ -79,6 +80,7 @@ export const Eliminar: React.FC<DropdownProps> = ({
   const handleDeleteCategory = async (e: React.FormEvent) => {
     e.preventDefault();
     const selectedOptionValues = selectedValues();
+
     try {
       await fetch(`/api/categories/multiples`, {
         method: "POST",
@@ -88,6 +90,17 @@ export const Eliminar: React.FC<DropdownProps> = ({
 
       setSelected([]);
 
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "info",
+        title: "Categoría Eliminada correctamente",
+      });
       // Fetch the updated categories after deletion
       const updatedOptionList = await handleGetUpdatedCategories();
       setOptions(updatedOptionList);

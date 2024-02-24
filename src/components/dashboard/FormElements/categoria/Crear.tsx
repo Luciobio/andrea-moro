@@ -1,12 +1,26 @@
 "use client";
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function Crear() {
   const [categoryTitle, setCategoryTitle] = useState("");
 
   const handleAddCategory = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    if (!categoryTitle.trim()) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "error",
+        title: "El título de la categoría no puede estar en blanco",
+      });
+      return;
+    }
     try {
       await fetch("/api/categories", {
         method: "POST",
@@ -16,8 +30,29 @@ export default function Crear() {
         }),
       });
       setCategoryTitle("");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Nueva categoría creada",
+      });
     } catch (err) {
-      console.log(err);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Error al crear la categoría",
+      });
     }
   };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { OptionList } from ".";
+import Swal from "sweetalert2";
 interface Option {
   value: string;
   text: string;
@@ -87,7 +88,17 @@ export const Eliminar: React.FC<DropdownProps> = ({
       });
 
       setSelected([]);
-
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "info",
+        title: "Curso Eliminado correctamente",
+      });
       // Fetch the updated categories after deletion
       const updatedOptionList = await handleGetUpdatedCategories();
       setOptions(updatedOptionList);
@@ -136,7 +147,7 @@ export const Eliminar: React.FC<DropdownProps> = ({
     >
       <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
         <h3 className="font-medium text-black dark:text-white">
-          Eliminar Producto
+          Eliminar Curso
         </h3>
       </div>
       <div className="flex flex-col gap-5.5 p-6.5">
@@ -201,7 +212,7 @@ export const Eliminar: React.FC<DropdownProps> = ({
                           {selected.length === 0 && (
                             <div className="flex-1">
                               <input
-                                placeholder="Selecciona los productos"
+                                placeholder="Selecciona los cursos"
                                 className="h-full w-full appearance-none bg-transparent p-1 px-2 outline-none"
                                 defaultValue={selectedValues()}
                               />
@@ -280,7 +291,7 @@ export const Eliminar: React.FC<DropdownProps> = ({
           type="submit"
           className="inline-flex items-center justify-center rounded-md bg-meta-1 px-10 py-4 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
         >
-          Eliminar Categoría
+          Eliminar Curso
         </button>
       </div>
     </form>

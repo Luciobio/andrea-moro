@@ -6,6 +6,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 import { login, registerUser } from "@/actions";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 type FormInputs = {
   name: string;
@@ -34,7 +35,19 @@ export const SignupForm = () => {
     }
 
     await login(email.toLowerCase(), password);
-    window.location.replace("/");
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Cuenta creada correctamente",
+    }).then(() => {
+      window.location.replace("/");
+    });
   };
 
   return (
