@@ -27,7 +27,6 @@ export default async function CursoPage({params}:Props) {
   return (
     <div>
         <Navbar/>
-        <h1>{params.id}</h1>
         <Curso curso = {curso}/>
         <Footer/>
     </div>

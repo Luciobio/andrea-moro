@@ -26,7 +26,7 @@ const cursos = [
     {
         id: 0,
         name: 'Flores para Difusor y Grandotas',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Principiantes', 'Tela'],
         price: 6000,
         imgs: [difusors,grandotas],
@@ -34,7 +34,7 @@ const cursos = [
     {
         id: 1,
         name: 'Pimpollo de Rosas y Peonias',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Intermedias', 'Tela'],
         price: 8000,
         imgs: [pimpollo, difusorg],
@@ -42,7 +42,7 @@ const cursos = [
     {
         id: 2,
         name: 'Jazmines y Cariñosas',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Tela'],
         price: 8000,
         imgs: [jazmin, carinosa],
@@ -50,7 +50,7 @@ const cursos = [
     {
         id: 3,
         name: 'Flores de Papel Manteca',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 6000,
         imgs: [manteca, manteca2, manteca3],
@@ -58,7 +58,7 @@ const cursos = [
     {
         id: 4,
         name: 'Mis Gigantes',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 9000,
         imgs: [gigante,gigante2,gigante3],
@@ -66,7 +66,7 @@ const cursos = [
     {
         id: 5,
         name: 'Reales Peonias',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 12000,
         imgs: [peonia,peonia2,peonia3],
@@ -74,7 +74,7 @@ const cursos = [
     {
         id: 6,
         name: 'Reales Magnolias y Clavelinas',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 18000,
         imgs: [magnolia,clavelina],
@@ -82,7 +82,7 @@ const cursos = [
     {
         id: 7,
         name: 'Rosas Salvajes y sus Pimpollos',
-        description: '',
+        description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 13000,
         imgs: [rosasalvaje,rosasalvaje2,rosasalvaje3],
