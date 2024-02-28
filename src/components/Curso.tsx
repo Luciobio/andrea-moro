@@ -23,7 +23,7 @@ export const Curso = ({ curso }: Props) => {
         <div className='flex flex-col justify-center'>
             <nav className="flex h-12 bg-grisclaro items-center">
                 <div className="flex flex-row items-center w-10/12 mx-auto ">
-                    {categories.map(c => (<div className="flex flex-row items-center"><span key={c} className='text-[#9F9F9F] mr-8'>{c}</span><FaChevronRight className='mr-8' /></div>))}
+                    {categories.map(c => (<div key={'a'+c} className="flex flex-row items-center"><span key={c} className='text-[#9F9F9F] mr-8'>{c}</span><FaChevronRight key={'b'+c} className='mr-8' /></div>))}
                     <span className="font-medium hidden lg:block">{name}</span>
                 </div>
             </nav>
@@ -33,7 +33,7 @@ export const Curso = ({ curso }: Props) => {
             <div className="flex flex-col lg:flex-row md:flex-row w-10/12 mx-auto justify-between">
                 <div key='imageGallery' className='flex flex-row my-8 mx-2 lg:w-2/4'>
                     <div key='secondaryImages' className='flex flex-col'>
-                        {imgs.map(i => (<Image className='rounded-lg w-16 m-2' src={i} alt={name} onClick={() => handleIndicatorClick(imgs.indexOf(i))} />))}
+                        {imgs.map(i => (<Image key={i.src} className='rounded-lg w-16 m-2' src={i} alt={name} onClick={() => handleIndicatorClick(imgs.indexOf(i))} />))}
                     </div>
                     <Image key='mainImage' className='rounded-lg w-9/12 m-2 mr-6' src={imgs[currentImageIndex]} alt={name} />
                 </div>
