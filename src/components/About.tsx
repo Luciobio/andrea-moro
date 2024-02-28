@@ -9,7 +9,7 @@ export const About = () => {
     return (
         <div
             id="sobre-mi"
-            className="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen w-screen"
+            className="flex items-center justify-center bg-cover bg-no-repeat bg-center h-lvh"
             style={{ backgroundImage: `url(${aboutbg.src})` }}
         >
             <div className="flex flex-col items-center justify-center lg:flex-row md:flex-col sm:flex-col bg-grisoscuro size-8/12 lg:size-9/12 ">

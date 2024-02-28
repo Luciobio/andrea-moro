@@ -6,12 +6,13 @@ import Link from 'next/link';
 
 export const Navbar = () => {
   return (
-    <div className="relative mx-auto w-screen">
+    <div>
       {/* <!-- navbar --> */}
-      <nav className="flex justify-center bg-vanilla w-screen">
+      <nav className="flex justify-center bg-vanilla">
         <Image className="py-5" src={andreaLogo} alt={"Logo"} width={150} height={150} priority={false} />
       </nav>
-      <nav className="flex justify-center items-center align-middle bg-vanilla w-screen">
+
+      <nav className="flex justify-center items-center align-middle bg-vanilla">
         <div className="px-5 xl:px-6 py-3 flex w-10/12 justify-center items-center align-middle">
 
           <div id='search' className='w-3/12 flex justify-start align-middle'>

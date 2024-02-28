@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const Contact = () => {
   return (
-    <div id='contacto' className='lg:flex lg:flex-row md:flex md:flex-row flex flex-col w-screen h-3/5 bg-grisoscuro'>
+    <div id='contacto' className='lg:flex lg:flex-row md:flex md:flex-row flex flex-col h-3/5 bg-grisoscuro'>
         <Image id='pic_andrea_desk' className='object-cover size-full lg:size-3/5 md:size-3/5 sm:size-4/5' src={andreadesk} alt={'Andrea escritorio'}/>
         <div className='flex flex-col items-center justify-center align-middle bg-grisclaro h-3/6 my-auto p-10 lg:-ml-32 md:-ml-32'>
             <h2 className='text-3xl text-center font-bold'>Cursos en vivo presenciales</h2>
