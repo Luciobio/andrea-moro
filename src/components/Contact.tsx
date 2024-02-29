@@ -11,7 +11,7 @@ export const Contact = () => {
       <div className='flex flex-col items-center justify-center align-middle bg-grisclaro h-3/6 my-auto p-10 lg:-ml-32 md:-ml-32'>
         <h2 className='text-3xl text-center font-bold'>Cursos en vivo presenciales</h2>
         <span className='w-8/12 my-10'>
-          <p className='text-xl font-light text-center'> Ponte en contacto conmigo para coordinar la posibilidad de organizar un curso presencial en tu localidad.</p>
+          <p className='text-xl font-light text-center'> Ponete en contacto conmigo para coordinar la posibilidad de organizar un curso presencial en tu localidad.</p>
         </span>
         <div className='flex justify-center w-full h-12'>
           <Link className='flex items-center justify-center align-middle border hover:border-2 hover:bg-blanco hover:shadow-md border-marron p-2 font-semibold  md:w-4/12 lg:w-4/12' href={'https://wa.me/543576483367'} target={'_blank'}>
