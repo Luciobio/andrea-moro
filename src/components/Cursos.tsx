@@ -16,12 +16,11 @@ export const Cursos = () => {
                     cursos.map((curso: iCurso) => (
                         <Card
                             key={curso.name}
-                            curso = {curso}
+                            curso={curso}
                         />
                     ))
                 }
             </div>
-
         </div>
     )
 }

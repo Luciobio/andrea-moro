@@ -29,7 +29,7 @@ const cursos = [
         description: 'Descripción del curso',
         categories: ['Principiantes', 'Tela'],
         price: 6000,
-        imgs: [difusors,grandotas],
+        imgs: [difusors, grandotas],
     },
     {
         id: 1,
@@ -61,7 +61,7 @@ const cursos = [
         description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 9000,
-        imgs: [gigante,gigante2,gigante3],
+        imgs: [gigante, gigante2, gigante3],
     },
     {
         id: 5,
@@ -69,7 +69,7 @@ const cursos = [
         description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 12000,
-        imgs: [peonia,peonia2,peonia3],
+        imgs: [peonia, peonia2, peonia3],
     },
     {
         id: 6,
@@ -77,7 +77,7 @@ const cursos = [
         description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 18000,
-        imgs: [magnolia,clavelina],
+        imgs: [magnolia, clavelina],
     },
     {
         id: 7,
@@ -85,18 +85,18 @@ const cursos = [
         description: 'Descripción del curso',
         categories: ['Expertas', 'Papel'],
         price: 13000,
-        imgs: [rosasalvaje,rosasalvaje2,rosasalvaje3],
+        imgs: [rosasalvaje, rosasalvaje2, rosasalvaje3],
     },
 ]
 
-export const getCursos = async(): Promise<iCurso[]> => {
+export const getCursos = async (): Promise<iCurso[]> => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     return cursos;
 }
 
-export const getCurso = async(id: number): Promise<iCurso> => {
+export const getCurso = async (id: number): Promise<iCurso> => {
     await new Promise(resolve => setTimeout(resolve, 1000));
-     
+
     const curso = cursos.find(curso => curso.id === id);
     if (curso) {
         return curso;
