@@ -4,22 +4,35 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { useFormState, useFormStatus } from "react-dom";
 
+import Swal from "sweetalert2";
+
+
 import { authenticate } from "@/actions";
 import { IoInformationOutline } from "react-icons/io5";
 import clsx from "clsx";
-// import { useRouter } from 'next/navigation';
 
 export const SigninForm = () => {
-  // const router = useRouter();
   const [state, dispatch] = useFormState(authenticate, undefined);
 
   console.log(state);
 
   useEffect(() => {
     if (state === "Success") {
-      // redireccionar
-      // router.replace('/');
-      window.location.replace("/");
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Inicio de sessión correcto",
+      }).then(() => {
+        window.location.replace("/dashboard");
+      });
+
     }
   }, [state]);
 
@@ -47,17 +60,14 @@ export const SigninForm = () => {
         {state === "CredentialsSignin" && (
           <div className="flex flex-row mb-2">
             <IoInformationOutline className="h-5 w-5 text-red-500" />
-            <p className="text-sm text-red-500">
-              Credenciales no son correctas
-            </p>
+
+            <p className="text-sm text-red">Credenciales no son correctas</p>
+
           </div>
         )}
       </div>
 
       <LoginButton />
-      {/* <button type="submit" className="btn-primary">
-        Ingresar
-      </button> */}
 
       {/* divisor l ine */}
       <div className="flex items-center my-5">
