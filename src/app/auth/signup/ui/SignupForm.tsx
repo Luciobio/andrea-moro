@@ -6,7 +6,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 import { login, registerUser } from "@/actions";
 import { useState } from "react";
+
 import Swal from "sweetalert2";
+
 
 type FormInputs = {
   name: string;
@@ -35,6 +37,7 @@ export const SignupForm = () => {
     }
 
     await login(email.toLowerCase(), password);
+
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",

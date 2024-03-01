@@ -1,7 +1,9 @@
+
 "use client";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/dashboard/loader";
 import "../../css/dashboard.css";
+
 export default function RootLayout({
   children,
 }: Readonly<{

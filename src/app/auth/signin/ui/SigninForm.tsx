@@ -3,7 +3,9 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useFormState, useFormStatus } from "react-dom";
+
 import Swal from "sweetalert2";
+
 
 import { authenticate } from "@/actions";
 import { IoInformationOutline } from "react-icons/io5";
@@ -16,6 +18,7 @@ export const SigninForm = () => {
 
   useEffect(() => {
     if (state === "Success") {
+
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -29,6 +32,7 @@ export const SigninForm = () => {
       }).then(() => {
         window.location.replace("/dashboard");
       });
+
     }
   }, [state]);
 
@@ -56,7 +60,9 @@ export const SigninForm = () => {
         {state === "CredentialsSignin" && (
           <div className="flex flex-row mb-2">
             <IoInformationOutline className="h-5 w-5 text-red-500" />
+
             <p className="text-sm text-red">Credenciales no son correctas</p>
+
           </div>
         )}
       </div>

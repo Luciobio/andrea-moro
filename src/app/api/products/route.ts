@@ -155,6 +155,7 @@ export async function POST(req: Request) {
     }
   }
 }
+
 const uploadImages = async (images: File[]) => {
   try {
     const uploadPromises = images.map(async (image) => {
