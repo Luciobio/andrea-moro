@@ -47,13 +47,15 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                     </button>
 
                     <div className='flex flex-col-reverse lg:flex-row justify-center items-center  lg:items-start lg:h-5/6'>
+                        
+                        <span className='mx-0 my-6 text-blanco hover:drop-shadow text-xl cursor-pointer block lg:hidden underline' onClick={() => setModal(false)}>Cerrar</span>
                         <img
                             className='h-full'
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
                         />
-                        <IoClose className='lg:mx-2 mx-0 my-2 fill-blanco/75 hover:fill-blanco text-2xl lg:text-3xl' onClick={() => setModal(false)}/>
+                        <IoClose className='mx-2 fill-blanco/75 hover:fill-blanco text-3xl cursor-pointer hidden lg:block' onClick={() => setModal(false)}/>
 
                     </div>
 
