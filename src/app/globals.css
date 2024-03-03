@@ -32,4 +32,26 @@ body {
   }
 }
 
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity .4s ease, visibility .4s ease,;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 990;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
 

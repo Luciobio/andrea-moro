@@ -1,6 +1,8 @@
+'use client'
 import { StaticImageData } from 'next/image';
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import { IoClose } from 'react-icons/io5';
 
 interface Props {
     title: string,
@@ -10,11 +12,59 @@ interface Props {
 }
 
 export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
+    const [modal, setModal] = useState(false);
+    const [tempImgSrc, setTempImgSrc] = useState('');
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const getImg = (img: StaticImageData) => {
+        setTempImgSrc(img.src);
+        setCurrentImageIndex(imgs.indexOf(img))
+        setModal(true);
+    }
+
+    const handleNextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imgs.length);
+        setTempImgSrc(imgs[currentImageIndex + 1].src)
+    };
+
+    const handlePrevImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + imgs.length) % imgs.length);
+        setTempImgSrc(imgs[currentImageIndex - 1].src)
+    };
+
     return (
         <div id='galeria' className={`flex flex-col items-center justify-center w-10/12 mx-auto pb-20 bg-blanco ${background}`}>
             <h2 className='pt-8 pb-6 font-bold text-3xl'>{title}</h2>
             <span className=' pb-8 font-normal'>{subtitle}</span>
             <div id='cardCont' className='flex flex-wrap gap-10 items-center justify-center'>
+
+                <div className={modal ? 'modal open' : 'modal'}>
+                    <button type="button" className={currentImageIndex !== 0 ? "flex absolute top-0 left-0 z-999 justify-center items-center px-4 h-full my-auto cursor-pointer group focus:outline-none" : "hidden"} onClick={() => handlePrevImage()}>
+                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25  group-focus:ring-blanco group-focus:outline-none">
+                            <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span className="hidden">Previous</span>
+                        </span>
+                    </button>
+
+                    <div className='flex h-5/6'>
+                        <img
+                            className='h-full'
+                            src={tempImgSrc}
+                            alt=''
+                            onClick={() => setModal(false)}
+                        />
+                        <IoClose className='mx-2 fill-blanco/75 hover:fill-blanco text-3xl' onClick={() => setModal(false)}/>
+
+                    </div>
+
+
+                    <button type="button" className={currentImageIndex !== imgs.length - 1 ? "flex absolute top-0 right-0 z-999 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" : "hidden"} onClick={() => handleNextImage()}>
+                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25 group-focus:ring-blanco group-focus:outline-none">
+                            <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span className="hidden">Next</span>
+                        </span>
+                    </button>
+                </div>
                 {
                     imgs.map((i: StaticImageData) => (
                         <Image
@@ -22,6 +72,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                             key={i.src}
                             src={i}
                             alt=''
+                            onClick={() => getImg(i)}
                         />
                     ))
                 }
