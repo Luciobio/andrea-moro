@@ -39,8 +39,8 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
             <div id='cardCont' className='flex flex-wrap gap-10 items-center justify-center'>
 
                 <div className={modal ? 'modal open' : 'modal'}>
-                    <button type="button" className={currentImageIndex !== 0 ? "flex absolute top-0 left-0 justify-center items-center px-4 h-full my-auto cursor-pointer group focus:outline-none" : "hidden"} onClick={() => handlePrevImage()}>
-                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25  group-focus:ring-blanco group-focus:outline-none">
+                    <button type="button" className={currentImageIndex !== 0 ? "flex absolute top-0 left-0 justify-center items-center px-4 h-full my-auto cursor-pointer" : "hidden"} onClick={() => handlePrevImage()}>
+                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full lg:hover:bg-gris200/25 lg:bg-gris200/0 bg-gris200/35 focus:ring-blanco focus:outline-none">
                             <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
                             <span className="hidden">Previous</span>
                         </span>
@@ -58,8 +58,8 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                     </div>
 
 
-                    <button type="button" className={currentImageIndex !== imgs.length - 1 ? "flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" : "hidden"} onClick={() => handleNextImage()}>
-                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 group-hover:bg-gris200/25 group-focus:ring-blanco group-focus:outline-none">
+                    <button type="button" className={currentImageIndex !== imgs.length - 1 ? "flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer" : "hidden"} onClick={() => handleNextImage()}>
+                        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full lg:hover:bg-gris200/25 lg:bg-gris200/0 bg-gris200/35 focus:ring-blanco focus:outline-none">
                             <svg className="w-5 h-5 text-blanco/75 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                             <span className="hidden">Next</span>
                         </span>
