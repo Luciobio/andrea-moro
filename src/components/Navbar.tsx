@@ -81,10 +81,10 @@ export const Navbar = () => {
       <div id='menuMobile' className={ `${nav} xl:hidden lg:hidden md:hidden w-full justify-center align-middle py-2 bg-vanilla`}>
         {/* <!-- Nav Links --> */}
         <ul className='flex flex-col justify-center items-center font-semibold w-full h-auto space-y-1'>{/*  'hidden xl:flex lg:flex justify-between px-2 font-semibold' */}
-          <li><Link className="hover:text-marroncalido truncate" href="/#sobre-mi">Sobre Mi</Link></li>
-          <li><Link className="hover:text-marroncalido" href="/#cursos">Cursos</Link></li>
-          <li><Link className="hover:text-marroncalido" href="/#galeria">Galería</Link></li>
-          <li><Link className="hover:text-marroncalido" href="/#contacto">Contacto</Link></li>
+          <li><Link className="hover:text-marroncalido truncate" href="/#sobre-mi" onClick={() => openNav()}>Sobre Mi</Link></li>
+          <li><Link className="hover:text-marroncalido" href="/#cursos" onClick={() => openNav()}>Cursos</Link></li>
+          <li><Link className="hover:text-marroncalido" href="/#galeria" onClick={() => openNav()}>Galería</Link></li>
+          <li><Link className="hover:text-marroncalido" href="/#contacto" onClick={() => openNav()}>Contacto</Link></li>
         </ul>
       </div>
 
