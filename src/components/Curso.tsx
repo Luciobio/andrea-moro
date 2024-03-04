@@ -33,9 +33,9 @@ export const Curso = ({ curso }: Props) => {
             <div className="flex flex-col lg:flex-row md:flex-row w-10/12 mx-auto justify-between">
                 <div key='imageGallery' className='flex flex-row my-8 mx-2 lg:w-2/4'>
                     <div key='secondaryImages' className='flex flex-col'>
-                        {imgs.map(i => (<Image key={i.src} className='w-16 m-2' src={i} alt={name} onClick={() => handleIndicatorClick(imgs.indexOf(i))} />))}
+                        {imgs.map(i => (<Image draggable='false' key={i.src} className='w-16 m-2' src={i} alt={name} onClick={() => handleIndicatorClick(imgs.indexOf(i))} />))}
                     </div>
-                    <Image key='mainImage' className='w-9/12 m-2 mr-6' src={imgs[currentImageIndex]} alt={name} />
+                    <Image draggable='false' key='mainImage' className='w-9/12 m-2 mr-6 pl-2' src={imgs[currentImageIndex]} alt={name} />
                 </div>
 
                 <div key='infoBox' className='flex flex-col lg:my-8 px-8 lg:w-2/4 content-start'>

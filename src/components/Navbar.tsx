@@ -13,14 +13,12 @@ export const Navbar = () => {
     console.log()
   }
 
-
-
   return (
     <div>
       {/* Heading */}
       <nav className="flex justify-center bg-vanilla">
         <Link href={'/'}>
-          <Image className="py-5" src={andreaLogo} alt={"Logo"} width={150} height={150} priority={false} />
+          <Image draggable='false' className="py-5" src={andreaLogo} alt={"Logo"} width={150} height={150} priority={false} />
         </Link>
       </nav>
 

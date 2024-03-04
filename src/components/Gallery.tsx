@@ -54,6 +54,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
+                            draggable='false'
                         />
                         <IoClose className='mx-2 fill-blanco/75 hover:fill-blanco text-3xl cursor-pointer hidden lg:block' onClick={() => setModal(false)}/>
 
@@ -75,6 +76,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                             src={i}
                             alt=''
                             onClick={() => getImg(i)}
+                            draggable='false'
                         />
                     ))
                 }
