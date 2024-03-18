@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import aboutbg from "../../public/images/Fondo2.png";
-import aboutSelfie from "../../public/images/About_selfie_a.jpg";
-import aboutFlower from "../../public/images/About_flower_a.jpg";
+import aboutbg from "../../public/images/Fondo2.webp";
+import aboutSelfie from "../../public/images/About_selfie_a.webp";
+import aboutFlower from "../../public/images/About_flower_a.webp";
 import hola from "../../public/images/Hola.png";
 
 export const About = () => {

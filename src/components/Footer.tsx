@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../../public/images/Andrea Logo 2.jpg'
-import { MdAlternateEmail } from 'react-icons/md'
-import { FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
+import logo from '../../public/images/Andrea Logo 2.webp'
+import { MdOutlineEmail, MdOutlinePhone } from 'react-icons/md'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
 
 export const Footer = () => {
@@ -42,16 +42,16 @@ export const Footer = () => {
                         </div>
 
                         {/* AYUDA */}
-                        <div className="w-full px-4 lg:w-1/4 md:w-1/2 mb-4 hidden">
+                        <div className="w-full px-4 lg:w-1/4 md:w-1/2 mb-4">
                             <h2 className="xl:mb-10 lg:mb-10 mb-6 text-sm font-medium tracking-widest text-[#727272] uppercase">Ayuda</h2>
                             <nav className="mb-10 list-none xl:lg:space-y-8 space-y-4">
                                 <li className="">
-                                    <a className="text-gray-500 cursor-pointer hover:text-marroncalido">Preguntas Frecuentes</a>
+                                    <Link href='/#FAQ' className="text-gray-500 cursor-pointer hover:text-marroncalido">Preguntas Frecuentes</Link>
                                 </li>
-                                <li className="">
+                                <li className="hidden">
                                     <a className="text-gray-500 cursor-pointer hover:text-marroncalido">Métodos de Pago</a>
                                 </li>
-                                <li className="">
+                                <li className="hidden">
                                     <a className="text-gray-500 cursor-pointer hover:text-marroncalido">Retiro de Productos</a>
                                 </li>
                             </nav>
@@ -68,14 +68,14 @@ export const Footer = () => {
                                 </li>
                                 <li className="flex cursor-pointer hover:font-semibold">
                                     <FaInstagram className='text-2xl' />
-                                    <Link className="ml-4" href={'https://www.instagram.com/andrea_moro_tienda/'} target={'_blank'}>Instagram</Link>
+                                    <Link className="ml-4" href={'https://www.instagram.com/andrea_moro_tienda/'} target={'_blank'}>@andrea_moro_tienda</Link>
                                 </li>
                                 <li className="flex cursor-pointer hover:font-semibold">
-                                    <MdAlternateEmail className='text-2xl' />
+                                    <MdOutlineEmail className='text-2xl' />
                                     <Link className="ml-4" href='mailto:andymoro32@gmail.com'>andymoro32@gmail.com</Link>
                                 </li>
                                 <li className="flex cursor-pointer hover:font-semibold">
-                                    <FaPhoneAlt className='text-2xl' />
+                                    <MdOutlinePhone className='text-2xl' />
                                     <Link className="ml-4" href={'tel:+5493576483367'}>+54 9 3576 48-3367</Link>
                                 </li>
                             </nav>

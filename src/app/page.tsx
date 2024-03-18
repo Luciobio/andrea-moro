@@ -1,4 +1,4 @@
-import { About, Navbar, Cursos, Gallery, Contact, Footer } from "@/components";
+import { About, Navbar, Cursos, Gallery, Contact, FAQ, Footer } from "@/components";
 import { getImgs, getImgs2 } from "@/mockup_imgs";
 
 const imgs = await getImgs();
@@ -14,6 +14,7 @@ export default function Home() {
       <Gallery background="bg-vanilla" title={"Galería"} imgs={imgs} subtitle="Mis flores en distintos arreglos y espacios" />
       <Gallery title={"Andrea en acción"} imgs={andrea} />
       <Contact />
+      <FAQ />
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import andreadesk from '../../public/images/Andrea_desk.png'
+import andreadesk from '../../public/images/Andrea_desk.webp'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Link from 'next/link'
 
