@@ -48,12 +48,12 @@ export const FAQ = () => {
                     preguntas.map( item => (
                         <div key={`question ${item.id}`} className='flex flex-col items-center justify-center align-middle border-t border-marron w-full'>
                             <div className='flex justify-between w-full py-4'>
-                                <h3 className='ml-8 text-xl font-semibold'>{item.question}</h3>
+                                <h3 className='ml-8 text-xl font-semibold w-11/12'>{item.question}</h3>
                                 {
                                     selected === item.id ? (
-                                        <FaChevronUp className='mr-8 text-marron w-8 cursor-pointer hover:font-bold' onClick={() => toggle(item.id)}/>
+                                        <FaChevronUp className='mr-2 xl:lg:mr-8 text-marron w-8 cursor-pointer hover:font-bold' onClick={() => toggle(item.id)}/>
                                     ) : (
-                                        <FaChevronDown className='mr-8 text-marron w-8 cursor-pointer hover:font-bold' onClick={() => toggle(item.id)}/>
+                                        <FaChevronDown className='mr-2 xl:lg:mr-8 text-marron w-8 cursor-pointer hover:font-bold' onClick={() => toggle(item.id)}/>
                                     )
                                 }
                             </div>
