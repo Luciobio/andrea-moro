@@ -50,7 +50,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                         
                         <span className='mx-0 my-6 text-blanco hover:drop-shadow text-xl cursor-pointer block lg:hidden underline' onClick={() => setModal(false)}>Cerrar</span>
                         <img
-                            className='h-2/4 xl:lg:h-full aspect-[3/4] object-cover overflow-hidden'
+                            className=' size-96 xl:lg:h-full aspect-[3/4] object-cover overflow-hidden'
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
