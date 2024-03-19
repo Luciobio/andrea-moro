@@ -46,11 +46,11 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                         </span>
                     </button>
 
-                    <div className='flex flex-col-reverse lg:flex-row justify-center items-center  lg:items-start lg:h-5/6'>
+                    <div className='flex flex-col-reverse xl:lg:flex-row justify-center items-center lg:items-start xl:h-5/6 lg:h-5/6 md:h-5/6 sm:h-5/6'>
                         
                         <span className='mx-0 my-6 text-blanco hover:drop-shadow text-xl cursor-pointer block lg:hidden underline' onClick={() => setModal(false)}>Cerrar</span>
                         <img
-                            className='h-full aspect-[3/4] object-cover'
+                            className='h-full aspect-[3/4] object-cover overflow-hidden'
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
