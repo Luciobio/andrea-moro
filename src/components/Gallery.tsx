@@ -50,7 +50,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                         
                         <span className='mx-0 my-6 text-blanco hover:drop-shadow text-xl cursor-pointer block lg:hidden underline' onClick={() => setModal(false)}>Cerrar</span>
                         <img
-                            className='h-full'
+                            className='h-full aspect-[3/4] object-cover'
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
@@ -71,7 +71,7 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                 {
                     imgs.map((i: StaticImageData) => (
                         <Image
-                            className='lg:xl:w-1/5 w-2/5'
+                            className='lg:xl:w-1/5 w-2/5 aspect-[3/4] object-cover'
                             key={`gallery${i.src}`}
                             src={i}
                             alt=''
