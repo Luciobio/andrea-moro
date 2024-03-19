@@ -1,12 +1,33 @@
 import { StaticImageData } from 'next/image'
-import gallery1 from '../public/images/gallery/Gallery1.webp'
-import gallery2 from '../public/images/gallery/Gallery2.webp'
-import gallery3 from '../public/images/gallery/Gallery3.webp'
-import gallery4 from '../public/images/gallery/Gallery4.webp'
-import gallery5 from '../public/images/gallery/Gallery5.webp'
-import gallery6 from '../public/images/gallery/Gallery6.webp'
-import gallery7 from '../public/images/gallery/Gallery7.webp'
-import gallery8 from '../public/images/gallery/Gallery8.webp'
+import gallery00 from '../public/images/gallery/botellapapelmanteca.webp'
+import gallery01 from '../public/images/gallery/bouquetela.webp'
+import gallery02 from '../public/images/gallery/cajaflores.webp'
+import gallery03 from '../public/images/gallery/carinosaequisetum.webp'
+import gallery04 from '../public/images/gallery/carinosamarron.webp'
+import gallery05 from '../public/images/gallery/sombrerofloral.webp'
+import gallery06 from '../public/images/gallery/carinosascelerosas.webp'
+import gallery07 from '../public/images/gallery/carinosasrosas.webp'
+import gallery08 from '../public/images/gallery/celesteyrosa.webp'
+import gallery09 from '../public/images/gallery/giganteblanca.webp'
+import gallery10 from '../public/images/gallery/jarrontela.webp'
+import gallery11 from '../public/images/gallery/peoniaazul.webp'
+import gallery12 from '../public/images/gallery/peonias.webp'
+import gallery13 from '../public/images/gallery/peoniastela.webp'
+import gallery14 from '../public/images/gallery/pimpolloscolgados.webp'
+import gallery15 from '../public/images/gallery/pimpollosilla.webp'
+import gallery16 from '../public/images/gallery/ramocarinosas.webp'
+import gallery17 from '../public/images/gallery/ramocarinosasclaras.webp'
+import gallery18 from '../public/images/gallery/ramocolorido.webp'
+import gallery19 from '../public/images/gallery/ramograndotas.webp'
+import gallery20 from '../public/images/gallery/ramonaranja.webp'
+import gallery21 from '../public/images/gallery/ramopapelmanteca.webp'
+import gallery22 from '../public/images/gallery/ramopeoniastela.webp'
+import gallery23 from '../public/images/gallery/ramopimpollos.webp'
+import gallery24 from '../public/images/gallery/ramorosa.webp'
+import gallery25 from '../public/images/gallery/ramorosas.webp'
+import gallery26 from '../public/images/gallery/ramorositas.webp'
+import gallery27 from '../public/images/gallery/ramotela.webp'
+
 
 import andrea1 from '../public/images/andrea/Andrea1.webp'
 import andrea2 from '../public/images/andrea/Andrea2.webp'
@@ -18,14 +39,34 @@ import andrea7 from '../public/images/andrea/Andrea7.webp'
 import andrea8 from '../public/images/andrea/Andrea8.webp'
 
 const gallery = [
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8
+    gallery00,
+    gallery01,
+    gallery02,
+    gallery03,
+    gallery04,
+    gallery05,
+    gallery06,
+    gallery07,
+    gallery08,
+    gallery09,
+    gallery10,
+    gallery11,
+    gallery12,
+    gallery13,
+    gallery14,
+    gallery15,
+    gallery16,
+    gallery17,
+    gallery18,
+    gallery19,
+    gallery20,
+    gallery21,
+    gallery22,
+    gallery23,
+    gallery24,
+    gallery25,
+    gallery26,
+    gallery27,
 ]
 
 const andrea = [

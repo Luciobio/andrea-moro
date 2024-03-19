@@ -62,7 +62,7 @@ const cursos = [
     {
         id: 8,
         name: 'Margaritas Maga',
-        description: ' ',
+        description: 'Estas flores de cartulina, son ideales para pequeños presentes , como las docentes amarán estas margaritas! La cartulina es un material absolutamente fácil de conseguir! Estas flores son de colores plenos! Quedan muy lindas combinando colores!',
         categories: ['Expertas', 'Papel'],
         price: 6000,
         imgs: [margaritas1, margaritas2, margaritas3, margaritas4],

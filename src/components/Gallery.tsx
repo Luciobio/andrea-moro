@@ -71,8 +71,8 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                 {
                     imgs.map((i: StaticImageData) => (
                         <Image
-                            className='lg:w-1/5 w-2/5'
-                            key={i.src}
+                            className='lg:xl:w-1/5 w-2/5'
+                            key={`gallery${i.src}`}
                             src={i}
                             alt=''
                             onClick={() => getImg(i)}
