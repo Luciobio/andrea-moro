@@ -7,7 +7,7 @@ const preguntas = [
     {
         id: 0,
         question: '¿Cómo accedo a los cursos una vez realizada la compra?',
-        answer: 'Una vez completada la transferencia, te proporcionaremos acceso a través de WhatsApp. Todos los vídeos serán enviados a tu número de WhatsApp personal, donde los tendrás disponibles para ver a tu propio ritmo y en la comodidad de tu hogar. Además, estarás en contacto directo con nosotros para resolver cualquier duda que surja durante el proceso. ¡Prepárate para disfrutar de todas las técnicas y consejos exclusivos que ofrecemos!'
+        answer: 'Una vez completada la transferencia, te proporcionaré acceso a través de WhatsApp. Todos los vídeos serán enviados a tu número de WhatsApp personal, donde los tendrás disponibles para ver a tu propio ritmo y en la comodidad de tu hogar. Además, estarás en contacto directo conmigo para resolver cualquier duda que surja durante el proceso. ¡Prepárate para disfrutar de todas las técnicas y consejos exclusivos que te voy a ofrecer!'
     },
     {
         
