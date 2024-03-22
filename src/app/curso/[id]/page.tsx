@@ -1,4 +1,4 @@
-import { Navbar, Footer, Curso } from "@/components"
+import { Navbar, Footer, Curso, FAQ } from "@/components"
 import { iCurso } from "@/interfaces";
 import { getCurso } from "@/mockup";
 import { notFound } from "next/navigation";
@@ -28,6 +28,7 @@ export default async function CursoPage({params}:Props) {
     <div>
         <Navbar/>
         <Curso curso = {curso}/>
+        <FAQ />
         <Footer/>
     </div>
   );

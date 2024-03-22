@@ -6,21 +6,27 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 const preguntas = [
     {
         id: 0,
+        question: '¿Cómo accedo a los cursos una vez realizada la compra?',
+        answer: 'Una vez completada la transferencia, te proporcionaremos acceso a través de WhatsApp. Todos los vídeos serán enviados a tu número de WhatsApp personal, donde los tendrás disponibles para ver a tu propio ritmo y en la comodidad de tu hogar. Además, estarás en contacto directo con nosotros para resolver cualquier duda que surja durante el proceso. ¡Prepárate para disfrutar de todas las técnicas y consejos exclusivos que ofrecemos!'
+    },
+    {
+        
+        id: 1,
         question: '¿Que tela usas?',
         answer: 'Para todas mis flores de tela uso lienzo.'
     },
     {
-        id: 1,
+        id: 2,
         question: '¿Cómo recuperar las flores de tela o papel después de un tiempo?',
         answer: 'Como todo, absolutamente todo, las flores, así sean de papel o tela, tienen una vida útil, si las ves sucias, decoloradas, y casi sin forma, mi sugerencia e invitación… es que crees tus nuevas flores!'
     },
     {
-        id: 2,
+        id: 3,
         question: '¿Cómo preservas los secos o el eucaliptus medicinal?',
         answer: 'Nunca he preservado ningún seco, una vez que los cortó, los cuelgo boca abajo por una semana, en un lugar seco, y ya está! Todo listo para armar tus ramos.'
     },
     {
-        id: 3,
+        id: 4,
         question: 'Mi ramo de flores y secos perdió vida, ¿qué hago?',
         answer: 'Le sacas los secos, separas las flores de tela o papel , juntas o compras nuevos secos o verdes , y armas un nuevo ramo con las flores de tela o papel que habías separado! Y mágicamente, parecerá que tienes un nuevo ramo!'
     },
@@ -57,7 +63,7 @@ export const FAQ = () => {
                                     )
                                 }
                             </div>
-                            <span className={`ml-8 self-start ${selected === item.id ? isOpen : closed}`}>
+                            <span className={`ml-8 self-start w-[80%] mr-8 ${selected === item.id ? isOpen : closed}`}>
                                 {item.answer}
                             </span>
                         </div>
