@@ -22,6 +22,10 @@ import margaritas1 from "../public/images/Flores/Margaritas1.jpeg"
 import margaritas2 from "../public/images/Flores/Margaritas2.jpeg"
 import margaritas3 from "../public/images/Flores/Margaritas3.jpeg"
 import margaritas4 from "../public/images/Flores/Margaritas4.jpeg"
+import marimonas1 from "../public/images/Flores/Marimonas1.webp"
+import marimonas2 from "../public/images/Flores/Marimonas2.webp"
+import marimonas3 from "../public/images/Flores/Marimonas3.webp"
+import marimonas4 from "../public/images/Flores/Marimonas4.webp"
 
 import { iCurso } from '@/interfaces';
 
@@ -85,19 +89,27 @@ const cursos = [
     },
     {
         id: 6,
-        name: 'Reales Magnolias y Clavelinas',
-        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
-        categories: ['Expertas', 'Papel'],
-        price: 18000,
-        imgs: [magnolia, clavelina],
-    },
-    {
-        id: 7,
         name: 'Rosas Salvajes y sus Pimpollos',
         description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
         price: 13000,
         imgs: [rosasalvaje, rosasalvaje2, rosasalvaje3],
+    },
+    {
+        id: 7,
+        name: 'Reales Marimoñas',
+        description: 'Estas flores de papel crepé son increíblemente bellas gracias a la cantidad de pétalos que tienen, y su esplendor viene dado por la combinación de sus colores. Te podría decir que estas son realmente imperdibles!!!',
+        categories: ['Expertas', 'Papel'],
+        price: 15000,
+        imgs: [marimonas1, marimonas2, marimonas3, marimonas4],
+    },
+    {
+        id: 8,
+        name: 'Reales Magnolias y Clavelinas',
+        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
+        categories: ['Expertas', 'Papel'],
+        price: 18000,
+        imgs: [magnolia, clavelina],
     },
 ]
 
