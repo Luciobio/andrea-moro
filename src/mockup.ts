@@ -26,6 +26,10 @@ import marimonas1 from "../public/images/Flores/Marimonas1.webp"
 import marimonas2 from "../public/images/Flores/Marimonas2.webp"
 import marimonas3 from "../public/images/Flores/Marimonas3.webp"
 import marimonas4 from "../public/images/Flores/Marimonas4.webp"
+import tulistulis1 from "../public/images/Flores/Tulistulis1.webp"
+import tulistulis2 from "../public/images/Flores/Tulistulis2.webp"
+import tulistulis3 from "../public/images/Flores/Tulistulis3.webp"
+import tulistulis4 from "../public/images/Flores/Tulistulis4.webp"
 
 import { iCurso } from '@/interfaces';
 
@@ -57,6 +61,14 @@ const cursos = [
     },
     {
         id: 3,
+        name: 'Tulis Tulis',
+        description: 'Hermosos tulipanes de papel crepé',
+        categories: ['Principiantes', 'Papel'],
+        price: 17000,
+        imgs: [tulistulis1, tulistulis2, tulistulis3, tulistulis4],
+    },
+    {
+        id: 4,
         name: 'Flores de Papel Manteca',
         description: 'Con este material tan simple como es el papel manteca que utilizamos en la cocina, lograrás tonos muy delicados, suaves y pasteles! Lo más aplicable de este curso, es la técnica del teñido del papel. Con estas flores de papel manteca podrás realizar centros de mesas, coronas, vinchas y muchas cosas más!',
         categories: ['Expertas', 'Papel'],
@@ -64,7 +76,7 @@ const cursos = [
         imgs: [manteca, manteca2, manteca3],
     },
     {
-        id: 8,
+        id: 5,
         name: 'Margaritas Maga',
         description: 'Estas flores de cartulina, son ideales para pequeños presentes , como las docentes amarán estas margaritas! La cartulina es un material absolutamente fácil de conseguir! Estas flores son de colores plenos! Quedan muy lindas combinando colores!',
         categories: ['Expertas', 'Papel'],
@@ -72,7 +84,7 @@ const cursos = [
         imgs: [margaritas1, margaritas2, margaritas3, margaritas4],
     },
     {
-        id: 4,
+        id: 6,
         name: 'Mis Gigantes',
         description: 'Las ideales y gigantes para decoración de eventos, vidrieras y presentaciones! Estas son las requeridas por las organizadoras de eventos, la técnica es de las que requieren más trabajo, ya que se trabaja con dos materiales por cada pétalo. En este curso, que requiere de más paciencia, te llevará más tiempo el armado final ¡pero el resultado será maravilloso!',
         categories: ['Expertas', 'Papel'],
@@ -80,23 +92,23 @@ const cursos = [
         imgs: [gigante, gigante2, gigante3],
     },
     {
-        id: 5,
+        id: 7,
         name: 'Reales Peonías',
-        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
+        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
         price: 12000,
         imgs: [peonia, peonia2, peonia3],
     },
     {
-        id: 6,
+        id: 8,
         name: 'Rosas Salvajes y sus Pimpollos',
-        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
+        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
         price: 13000,
         imgs: [rosasalvaje, rosasalvaje2, rosasalvaje3],
     },
     {
-        id: 7,
+        id: 9,
         name: 'Reales Marimoñas',
         description: 'Estas flores de papel crepé son increíblemente bellas gracias a la cantidad de pétalos que tienen, y su esplendor viene dado por la combinación de sus colores. Te podría decir que estas son realmente imperdibles!!!',
         categories: ['Expertas', 'Papel'],
@@ -104,9 +116,9 @@ const cursos = [
         imgs: [marimonas1, marimonas2, marimonas3, marimonas4],
     },
     {
-        id: 8,
+        id: 10,
         name: 'Reales Magnolias y Clavelinas',
-        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepe, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
+        description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
         price: 18000,
         imgs: [magnolia, clavelina],
