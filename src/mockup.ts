@@ -40,7 +40,7 @@ const cursos = [
         name: 'Flores para Difusor y Grandotas',
         description: 'En este curso encontrarás la puerta al mundo de las flores. Son flores de técnica muy simple donde podrás, hoy mismo, armar las tuyas. Estas flores son ideales para armar pequeños bouquets!',
         categories: ['Principiantes', 'Tela'],
-        price: 6000,
+        price: 8000,
         imgs: [difusors, grandotas],
     },
     {
@@ -48,7 +48,7 @@ const cursos = [
         name: 'Pimpollo de Rosas y Peonías',
         description: 'Aquí te enseño la técnica del armado de los pimpollos de rosas, estas son ideales en ramos para cumpleaños y aniversarios. Con las peonías de tela, te envío el tratamiento para la tela y el molde de las peonías, que quedan preciosas si las haces en dos tonos diferentes, probalas!!!',
         categories: ['Intermedias', 'Tela'],
-        price: 8000,
+        price: 10000,
         imgs: [pimpollo, difusorg],
     },
     {
@@ -56,7 +56,7 @@ const cursos = [
         name: 'Jazmines y Cariñosas',
         description: 'Con los jazmines aprenderás la técnica del armado pétalo por pétalo, que tiene su parte más creativa entre todos mis cursos, podes jugar con tamaños y cantidades de pétalos! Las cariñosas harán que te enamores de la tela, aquí aplicarás más técnica con tus manos, estas son mis preferidas para armar ramos!',
         categories: ['Expertas', 'Tela'],
-        price: 8000,
+        price: 10000,
         imgs: [jazmin, carinosa],
     },
     {
@@ -72,7 +72,7 @@ const cursos = [
         name: 'Flores de Papel Manteca',
         description: 'Con este material tan simple como es el papel manteca que utilizamos en la cocina, lograrás tonos muy delicados, suaves y pasteles! Lo más aplicable de este curso, es la técnica del teñido del papel. Con estas flores de papel manteca podrás realizar centros de mesas, coronas, vinchas y muchas cosas más!',
         categories: ['Expertas', 'Papel'],
-        price: 6000,
+        price: 8000,
         imgs: [manteca, manteca2, manteca3],
     },
     {
@@ -80,7 +80,7 @@ const cursos = [
         name: 'Margaritas Maga',
         description: 'Estas flores de cartulina, son ideales para pequeños presentes , como las docentes amarán estas margaritas! La cartulina es un material absolutamente fácil de conseguir! Estas flores son de colores plenos! Quedan muy lindas combinando colores!',
         categories: ['Expertas', 'Papel'],
-        price: 6000,
+        price: 8000,
         imgs: [margaritas1, margaritas2, margaritas3, margaritas4],
     },
     {
@@ -88,7 +88,7 @@ const cursos = [
         name: 'Mis Gigantes',
         description: 'Las ideales y gigantes para decoración de eventos, vidrieras y presentaciones! Estas son las requeridas por las organizadoras de eventos, la técnica es de las que requieren más trabajo, ya que se trabaja con dos materiales por cada pétalo. En este curso, que requiere de más paciencia, te llevará más tiempo el armado final ¡pero el resultado será maravilloso!',
         categories: ['Expertas', 'Papel'],
-        price: 9000,
+        price: 11000,
         imgs: [gigante, gigante2, gigante3],
     },
     {
@@ -96,7 +96,7 @@ const cursos = [
         name: 'Reales Peonías',
         description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
-        price: 12000,
+        price: 14000,
         imgs: [peonia, peonia2, peonia3],
     },
     {
@@ -104,7 +104,7 @@ const cursos = [
         name: 'Rosas Salvajes y sus Pimpollos',
         description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
-        price: 13000,
+        price: 15000,
         imgs: [rosasalvaje, rosasalvaje2, rosasalvaje3],
     },
     {
@@ -112,7 +112,7 @@ const cursos = [
         name: 'Reales Marimoñas',
         description: 'Estas flores de papel crepé son increíblemente bellas gracias a la cantidad de pétalos que tienen, y su esplendor viene dado por la combinación de sus colores. Te podría decir que estas son realmente imperdibles!!!',
         categories: ['Expertas', 'Papel'],
-        price: 15000,
+        price: 17000,
         imgs: [marimonas1, marimonas2, marimonas3, marimonas4],
     },
     {
@@ -120,7 +120,7 @@ const cursos = [
         name: 'Reales Magnolias y Clavelinas',
         description: 'Que decirte de las reales! El material que se utiliza aquí es papel crepé, en todas las variedades de MIS REALES!La joya de la corona en estos cursos, es la técnica de la preparación del papel, la infinidad de posibilidades que te dará esta técnica de lograr los colores que jamás pensaste que existirían! Esos colores que vos realices serán únicos e irrepetibles! ¡Te lo aseguro! ¡Te acordarás de mí cuando te inicies en LAS REALES! Estos son mis cursos más pedidos!!!',
         categories: ['Expertas', 'Papel'],
-        price: 18000,
+        price: 20000,
         imgs: [magnolia, clavelina],
     },
 ]
