@@ -88,7 +88,7 @@ const cursos = [
         name: 'Mis Gigantes',
         description: 'Las ideales y gigantes para decoración de eventos, vidrieras y presentaciones! Estas son las requeridas por las organizadoras de eventos, la técnica es de las que requieren más trabajo, ya que se trabaja con dos materiales por cada pétalo. En este curso, que requiere de más paciencia, te llevará más tiempo el armado final ¡pero el resultado será maravilloso!',
         categories: ['Expertas', 'Papel'],
-        price: 11000,
+        price: 20000,
         imgs: [gigante, gigante2, gigante3],
     },
     {
