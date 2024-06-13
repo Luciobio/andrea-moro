@@ -27,6 +27,11 @@ import gallery24 from '../public/images/gallery/ramorosa.webp'
 import gallery25 from '../public/images/gallery/ramorosas.webp'
 import gallery26 from '../public/images/gallery/ramorositas.webp'
 import gallery27 from '../public/images/gallery/ramotela.webp'
+import gallery28 from '../public/images/gallery/lirios_valijas.webp'
+import gallery29 from '../public/images/gallery/lirios_botella.webp'
+import gallery30 from '../public/images/gallery/lirios_closeup.webp'
+import gallery31 from '../public/images/gallery/lirios_macro.webp'
+
 
 
 import andrea1 from '../public/images/andrea/Andrea1.webp'
@@ -67,6 +72,10 @@ const gallery = [
     gallery25,
     gallery26,
     gallery27,
+    gallery28,
+    gallery29,
+    gallery30,
+    gallery31,
 ]
 
 const andrea = [

@@ -30,6 +30,10 @@ import tulistulis1 from "../public/images/Flores/Tulistulis1.webp"
 import tulistulis2 from "../public/images/Flores/Tulistulis2.webp"
 import tulistulis3 from "../public/images/Flores/Tulistulis3.webp"
 import tulistulis4 from "../public/images/Flores/Tulistulis4.webp"
+import lirios1 from "../public/images/Flores/Lirios1.webp"
+import lirios2 from "../public/images/Flores/Lirios2.webp"
+import lirios3 from "../public/images/Flores/Lirios3.webp"
+import lirios4 from "../public/images/Flores/Lirios4.webp"
 
 import { iCurso } from '@/interfaces';
 
@@ -122,6 +126,14 @@ const cursos = [
         categories: ['Expertas', 'Papel'],
         price: 20000,
         imgs: [magnolia, clavelina],
+    },
+    {
+        id: 11,
+        name: 'Mis Lirios',
+        description: 'Estas flores son muy delicadas. Los lirios representan feminidad, y con este curso, trataremos de crear los más hermosos.',
+        categories: ['Expertas', 'Papel'],
+        price: 20000,
+        imgs: [lirios1, lirios2, lirios3, lirios4],
     },
 ]
 
