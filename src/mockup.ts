@@ -112,6 +112,14 @@ const cursos = [
         imgs: [rosasalvaje, rosasalvaje2, rosasalvaje3],
     },
     {
+        id: 11,
+        name: 'Mis Lirios',
+        description: 'Estas flores son muy delicadas. Los lirios representan feminidad, y con este curso, trataremos de crear los más hermosos.',
+        categories: ['Expertas', 'Papel'],
+        price: 15000,
+        imgs: [lirios1, lirios2, lirios3, lirios4],
+    },
+    {
         id: 9,
         name: 'Reales Marimoñas',
         description: 'Estas flores de papel crepé son increíblemente bellas gracias a la cantidad de pétalos que tienen, y su esplendor viene dado por la combinación de sus colores. Te podría decir que estas son realmente imperdibles!!!',
@@ -126,14 +134,6 @@ const cursos = [
         categories: ['Expertas', 'Papel'],
         price: 20000,
         imgs: [magnolia, clavelina],
-    },
-    {
-        id: 11,
-        name: 'Mis Lirios',
-        description: 'Estas flores son muy delicadas. Los lirios representan feminidad, y con este curso, trataremos de crear los más hermosos.',
-        categories: ['Expertas', 'Papel'],
-        price: 20000,
-        imgs: [lirios1, lirios2, lirios3, lirios4],
     },
 ]
 
