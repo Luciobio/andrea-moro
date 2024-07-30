@@ -31,7 +31,7 @@ export const Card = ({ curso }: Props) => {
             <div className="overflow-hidden shadow-lg">
                 <div className="relative">
                     <div className="text-center overflow-hidden relative">
-                        <Image draggable='false' className='duration-700 ease-in-out' src={imgs[currentImageIndex]} alt={name} />
+                        <Image draggable='false' className='duration-700 ease-in-out aspect-[3/4] object-cover overflow-hidden' src={imgs[currentImageIndex]} alt={name} />
                         {/* Image indicator */}
                         <div className={imgs.length > 1 ? "flex absolute bottom-5 left-0 right-0 justify-center z-30 space-x-3" : 'hidden'}>
                             {
