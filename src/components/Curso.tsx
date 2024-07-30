@@ -40,7 +40,7 @@ export const Curso = ({ curso }: Props) => {
 
                 <div key='infoBox' className='flex flex-col lg:my-8 px-8 lg:w-2/4 content-start'>
                     <h2 className='text-2xl font-semibold mb-4 mt-4'>{name}</h2>
-                    <span className='text-lg font-semibold text-[#727272] mb-4'>{`$ ${price}`}</span>
+                    <span className='text-lg font-semibold text-[#727272] mb-4'>{`ARS$ ${price}`}</span>
                     <p className='mb-12'>{description}</p>
                     <span className='mb-1 text text-[#727272]'>Dificultad:</span>
                     <span className='mb-4'>{categories[0]}</span>

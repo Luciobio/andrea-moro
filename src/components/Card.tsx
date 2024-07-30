@@ -68,7 +68,7 @@ export const Card = ({ curso }: Props) => {
                     </span>
                     <span className="flex">
                         <div className="pl-4">
-                            <p className="text-lg font-semibold">${price}</p>
+                            <p className="text-lg font-semibold">ARS$ {price}</p>
                         </div>
                     </span>
                 </div>
