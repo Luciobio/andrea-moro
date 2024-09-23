@@ -42,10 +42,10 @@ export const Curso = ({ curso }: Props) => {
                     <h2 className='text-2xl font-semibold mb-4 mt-4'>{name}</h2>
                     <span className='text-lg font-semibold text-[#727272] mb-4'>{`ARS$ ${price}`}</span>
                     <p className='mb-12'>{description}</p>
-                    <span className='mb-1 text text-[#727272]'>Dificultad:</span>
-                    <span className='mb-4'>{categories[0]}</span>
+                    {/* <span className='mb-1 text text-[#727272]'>Dificultad:</span>
+                    <span className='mb-4'>{categories[0]}</span> */}
                     <span className='mb-1 text text-[#727272]'>Material:</span>
-                    <span className='mb-12'>{categories[1]}</span>
+                    <span className='mb-12'>{categories[0]}</span>
 
                     <span className='mb-4'>Contactate conmigo para obtener acceso a este curso:</span>
                     <Link className='flex items-center justify-center align-middle border border-marron hover:border-2 hover:shadow-md p-2 font-semibold  md:w-4/12 lg:w-4/12 mb-12' href={'https://wa.me/543576483367'} target={'_blank'}>
