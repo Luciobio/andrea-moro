@@ -32,7 +32,22 @@ import gallery29 from '../public/images/gallery/lirios_botella.webp'
 import gallery30 from '../public/images/gallery/lirios_closeup.webp'
 import gallery31 from '../public/images/gallery/lirios_macro.webp'
 
-
+import book01_01 from '../public/images/gallery/book01/book01_01.webp'
+import book01_02 from '../public/images/gallery/book01/book01_02.webp'
+import book01_03 from '../public/images/gallery/book01/book01_03.webp'
+import book01_04 from '../public/images/gallery/book01/book01_04.webp'
+import book01_05 from '../public/images/gallery/book01/book01_05.webp'
+import book01_06 from '../public/images/gallery/book01/book01_06.webp'
+import book01_07 from '../public/images/gallery/book01/book01_07.webp'
+import book01_08 from '../public/images/gallery/book01/book01_08.webp'
+import book01_09 from '../public/images/gallery/book01/book01_09.webp'
+import book01_10 from '../public/images/gallery/book01/book01_10.webp'
+import book01_11 from '../public/images/gallery/book01/book01_11.webp'
+import book01_12 from '../public/images/gallery/book01/book01_12.webp'
+import book01_13 from '../public/images/gallery/book01/book01_13.webp'
+import book01_14 from '../public/images/gallery/book01/book01_14.webp'
+import book01_15 from '../public/images/gallery/book01/book01_15.webp'
+import book01_16 from '../public/images/gallery/book01/book01_16.webp'
 
 import andrea1 from '../public/images/andrea/Andrea1.webp'
 import andrea2 from '../public/images/andrea/Andrea2.webp'
@@ -44,6 +59,22 @@ import andrea7 from '../public/images/andrea/Andrea7.webp'
 import andrea8 from '../public/images/andrea/Andrea8.webp'
 
 const gallery = [
+    book01_12,
+    book01_01,
+    book01_02,
+    book01_03,
+    book01_04,
+    book01_05,
+    book01_06,
+    book01_07,
+    book01_08,
+    book01_09,
+    book01_10,
+    book01_11,
+    book01_13,
+    book01_14,
+    book01_15,
+    book01_16,
     gallery00,
     gallery01,
     gallery02,
