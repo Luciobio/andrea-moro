@@ -11,7 +11,7 @@ interface Props {
 
 export const Card = ({ curso }: Props) => {
 
-    const { id, name, categories, price, imgs } = curso;
+    const { id, name, price, imgs } = curso;
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handleNextImage = () => {
@@ -63,7 +63,6 @@ export const Card = ({ curso }: Props) => {
                             <h3 className="text-xl font-bold h-12">
                                 {name}
                             </h3>
-                            <div className=" flex justify-between text-xs py-2 w-9/12 my-2"> {categories.map(c => (<span key={c} className='bg-grisoscuro py-2 px-4 mr-4 rounded-2xl text-[#454545] font-semibold'>{c}</span>))} </div>
                         </div>
                     </span>
                     <span className="flex">
