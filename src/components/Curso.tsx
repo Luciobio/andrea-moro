@@ -58,34 +58,4 @@ export const Curso = ({ curso }: Props) => {
                                 width={480}
                                 height={640}
                             />
-                        </>
-                    ) : (
-                        <div className='w-full aspect-[3/4] bg-grisclaro flex items-center justify-center'>
-                            <span className='text-sm text-[#999]'>Sin imágenes</span>
-                        </div>
-                    )}
-                </div>
-
-                {/* Info */}
-                <div key='infoBox' className='flex flex-col lg:my-8 px-8 lg:w-2/4 content-start'>
-                    <h2 className='text-2xl font-semibold mb-4 mt-4'>{name}</h2>
-                    <span className='text-lg font-semibold text-[#727272] mb-4'>
-                        ARS$ {price.toLocaleString("es-AR")}
-                    </span>
-                    {description && (
-                        <p className='text-base text-[#444] mb-4'>{description}</p>
-                    )}
-                    <span className='mb-4'>Contactate conmigo para obtener acceso a este curso:</span>
-                    <Link
-                        className='flex items-center justify-center align-middle border border-marron hover:border-2 hover:shadow-md p-2 font-semibold md:w-4/12 lg:w-4/12 mb-12'
-                        href={'https://wa.me/543576483367'}
-                        target={'_blank'}
-                    >
-                        <IoLogoWhatsapp className='fill-marron size-6 mx-2' />
-                        <span className='text-marron hover:font-black'>Contacto</span>
-                    </Link>
-                </div>
-            </div>
-        </div>
-    )
-}
+                  

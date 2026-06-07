@@ -22,6 +22,4 @@ export const Cursos = async () => {
                 }
             </div>
         </div>
-    )
-}
-
+  

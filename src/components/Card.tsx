@@ -80,13 +80,4 @@ export const Card = ({ curso }: Props) => {
                 <div className="flex bg-grisclaro">
                     <div className="w-full py-4 flex justify-center items-center h-16">
                         <Link href={`curso/${id}`}
-                            className="border border-marron text-marron hover:border-2 hover:shadow-md hover:bg-blanco py-2 px-4 text-xs font-semibold"
-                        >
-                            Ver más
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+                            className="border border-marron text-marron hover:border-2 hover:shadow-md hover:bg-blanco py-2 px-4 text-xs font-semi
