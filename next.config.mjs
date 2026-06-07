@@ -4,3 +4,11 @@ const nextConfig = {
         unoptimized: true,
         remotePatterns: [
             {
+                protocol: "https",
+                hostname: "pocketbase.vmoliver.cloud",
+            },
+        ],
+    },
+};
+
+export default nextConfig;

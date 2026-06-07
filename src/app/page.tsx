@@ -16,4 +16,5 @@ export default async function Home() {
       <FAQ />
       <Footer />
     </>
- 
+  );
+}
