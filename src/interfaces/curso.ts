@@ -1,8 +1,7 @@
-import { StaticImageData } from "next/image";
-
 export interface iCurso {
-    id: number;
+    id: string;
     name: string;
     price: number;
-    imgs: StaticImageData[];
+    description: string;
+    imgs: string[]; // URLs de PocketBase (o array vacío si no hay galería)
 }

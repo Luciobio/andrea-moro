@@ -1,12 +1,11 @@
 'use client'
-import { StaticImageData } from 'next/image';
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { IoClose } from 'react-icons/io5';
 
 interface Props {
     title: string,
-    imgs: StaticImageData[],
+    imgs: string[],
     subtitle?: string,
     background?: string
 }
@@ -16,20 +15,24 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
     const [tempImgSrc, setTempImgSrc] = useState('');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const getImg = (img: StaticImageData) => {
-        setTempImgSrc(img.src);
-        setCurrentImageIndex(imgs.indexOf(img))
+    if (!imgs.length) return null;
+
+    const getImg = (img: string, index: number) => {
+        setTempImgSrc(img);
+        setCurrentImageIndex(index);
         setModal(true);
     }
 
     const handleNextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imgs.length);
-        setTempImgSrc(imgs[currentImageIndex + 1].src)
+        const next = (currentImageIndex + 1) % imgs.length;
+        setCurrentImageIndex(next);
+        setTempImgSrc(imgs[next]);
     };
 
     const handlePrevImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + imgs.length) % imgs.length);
-        setTempImgSrc(imgs[currentImageIndex - 1].src)
+        const prev = (currentImageIndex - 1 + imgs.length) % imgs.length;
+        setCurrentImageIndex(prev);
+        setTempImgSrc(imgs[prev]);
     };
 
     return (
@@ -47,14 +50,15 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                     </button>
 
                     <div className='flex flex-col-reverse xl:lg:flex-row justify-center items-center lg:items-start xl:h-5/6 lg:h-5/6 md:h-5/6 sm:h-5/6'>
-                        
+
                         <span className='mx-0 my-6 text-blanco hover:drop-shadow text-xl cursor-pointer block lg:hidden underline' onClick={() => setModal(false)}>Cerrar</span>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             className='size-[32rem] xl:lg:h-full aspect-[3/4] object-cover overflow-hidden'
                             src={tempImgSrc}
                             alt=''
                             onClick={() => setModal(false)}
-                            draggable='false'
+                            draggable={false}
                         />
                         <IoClose className='mx-2 fill-blanco/75 hover:fill-blanco text-3xl cursor-pointer hidden lg:block' onClick={() => setModal(false)}/>
 
@@ -68,18 +72,19 @@ export const Gallery = ({ title, imgs, subtitle, background }: Props) => {
                         </span>
                     </button>
                 </div>
-                {
-                    imgs.map((i: StaticImageData) => (
-                        <Image
-                            className='lg:xl:w-1/5 w-2/5 aspect-[3/4] object-cover'
-                            key={`gallery${i.src}`}
-                            src={i}
-                            alt=''
-                            onClick={() => getImg(i)}
-                            draggable='false'
-                        />
-                    ))
-                }
+
+                {imgs.map((url, i) => (
+                    <Image
+                        className='lg:xl:w-1/5 w-2/5 aspect-[3/4] object-cover'
+                        key={url}
+                        src={url}
+                        alt=''
+                        width={320}
+                        height={427}
+                        onClick={() => getImg(url, i)}
+                        draggable={false}
+                    />
+                ))}
             </div>
         </div>
     )

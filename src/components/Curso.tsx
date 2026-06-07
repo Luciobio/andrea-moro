@@ -11,8 +11,9 @@ interface Props {
 
 export const Curso = ({ curso }: Props) => {
 
-    const { name, price, imgs } = curso;
+    const { name, price, description, imgs } = curso;
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const hasImgs = imgs.length > 0;
 
     const handleIndicatorClick = (index: number) => {
         setCurrentImageIndex(index);
@@ -21,27 +22,66 @@ export const Curso = ({ curso }: Props) => {
     return (
         <div className='flex flex-col justify-center'>
             <nav className="flex h-12 bg-grisclaro items-center">
-                <div className="flex flex-row items-center w-10/12 mx-auto ">
+                <div className="flex flex-row items-center w-10/12 mx-auto">
                     <span className="font-medium hidden lg:block">{name}</span>
                 </div>
             </nav>
 
-            <span className="text-lg font-semibold w-10/12 items-center self-center  :hidden md:hidden mt-4">{name}</span>
+            <span className="text-lg font-semibold w-10/12 items-center self-center md:hidden mt-4">{name}</span>
 
             <div className="flex flex-col lg:flex-row md:flex-row w-10/12 mx-auto justify-between">
+
+                {/* Galería */}
                 <div key='imageGallery' className='flex flex-row my-8 mx-2 lg:w-2/4'>
-                    <div key='secondaryImages' className='flex flex-col'>
-                        {imgs.map(i => (<Image draggable='false' key={i.src} className='w-16 m-2' src={i} alt={name} onClick={() => handleIndicatorClick(imgs.indexOf(i))} />))}
-                    </div>
-                    <Image draggable='false' key='mainImage' className='w-9/12 m-2 mr-6 pl-2 aspect-[3/4] object-cover overflow-hidden' src={imgs[currentImageIndex]} alt={name} />
+                    {hasImgs ? (
+                        <>
+                            <div key='secondaryImages' className='flex flex-col'>
+                                {imgs.map((url, i) => (
+                                    <Image
+                                        draggable='false'
+                                        key={url}
+                                        className='w-16 m-2 aspect-[3/4] object-cover cursor-pointer'
+                                        src={url}
+                                        alt={`${name} ${i + 1}`}
+                                        width={64}
+                                        height={85}
+                                        onClick={() => handleIndicatorClick(i)}
+                                    />
+                                ))}
+                            </div>
+                            <Image
+                                draggable='false'
+                                key='mainImage'
+                                className='w-9/12 m-2 mr-6 pl-2 aspect-[3/4] object-cover overflow-hidden'
+                                src={imgs[currentImageIndex]}
+                                alt={name}
+                                width={480}
+                                height={640}
+                            />
+                        </>
+                    ) : (
+                        <div className='w-full aspect-[3/4] bg-grisclaro flex items-center justify-center'>
+                            <span className='text-sm text-[#999]'>Sin imágenes</span>
+                        </div>
+                    )}
                 </div>
 
+                {/* Info */}
                 <div key='infoBox' className='flex flex-col lg:my-8 px-8 lg:w-2/4 content-start'>
                     <h2 className='text-2xl font-semibold mb-4 mt-4'>{name}</h2>
-                    <span className='text-lg font-semibold text-[#727272] mb-4'>{`ARS$ ${price}`}</span>
+                    <span className='text-lg font-semibold text-[#727272] mb-4'>
+                        ARS$ {price.toLocaleString("es-AR")}
+                    </span>
+                    {description && (
+                        <p className='text-base text-[#444] mb-4'>{description}</p>
+                    )}
                     <span className='mb-4'>Contactate conmigo para obtener acceso a este curso:</span>
-                    <Link className='flex items-center justify-center align-middle border border-marron hover:border-2 hover:shadow-md p-2 font-semibold  md:w-4/12 lg:w-4/12 mb-12' href={'https://wa.me/543576483367'} target={'_blank'}>
-                        < IoLogoWhatsapp className='fill-marron size-6 mx-2' />
+                    <Link
+                        className='flex items-center justify-center align-middle border border-marron hover:border-2 hover:shadow-md p-2 font-semibold md:w-4/12 lg:w-4/12 mb-12'
+                        href={'https://wa.me/543576483367'}
+                        target={'_blank'}
+                    >
+                        <IoLogoWhatsapp className='fill-marron size-6 mx-2' />
                         <span className='text-marron hover:font-black'>Contacto</span>
                     </Link>
                 </div>

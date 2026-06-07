@@ -10,7 +10,7 @@ interface Props {
 const fetchCurso = async(id: string): Promise<iCurso> => {
 
   try {
-    const curso = await getCurso(parseInt(id))
+    const curso = await getCurso(id)
     console.log('Se cargó: ', curso.name);
     return curso;
     
